@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class UpdateNumberInputField : MonoBehaviour {
-    private int _min = 1;
+    private int _min = 0;
     private int _max = 100;
     private InputField _inputField;
 
@@ -17,6 +17,10 @@ public class UpdateNumberInputField : MonoBehaviour {
 	
 	}
 
+    public void setMax(int newMax)
+    {
+        _max=newMax;
+    }
 
 
     public void UpdateNumber(string value) {

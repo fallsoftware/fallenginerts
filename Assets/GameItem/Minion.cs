@@ -6,6 +6,7 @@ using System.Text;
 
 class Minion
 {
+    public enum PRICE { WOOD = 20, IRON = 20, FOOD = 20, POPULATION = 1 };
     private const int lifetime=1000;
     public int time;
     public static int woodcost = 20;

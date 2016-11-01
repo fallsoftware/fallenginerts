@@ -2,14 +2,15 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class UpdateValueIron : MonoBehaviour {
+public class UpdateValuePopulation : MonoBehaviour {
     public Player player;
 	// Use this for initialization
 	void Start () {
+	
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        this.gameObject.GetComponent<Text>().text = player.iron+ "(" + player.getNumberIron()+")";
+        this.gameObject.GetComponent<Text>().text = player.population + "/" + player.maxpopulation;
 	}
 }

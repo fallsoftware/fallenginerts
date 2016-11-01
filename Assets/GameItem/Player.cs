@@ -4,10 +4,10 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 
+public enum RessourceType { WOOD, IRON, FOOD };
+
 public class Player : MonoBehaviour {
 
-    private int totalminion;
-    public int number;
     public int wood=0;
     public int iron=0;
     public int food=0;
@@ -22,8 +22,6 @@ public class Player : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        number = 1;
-        totalminion = 0;
         minionIdle = new List<Minion>();
         minionWood = new List<Minion>();
         minionIron = new List<Minion>();
@@ -36,8 +34,8 @@ public class Player : MonoBehaviour {
     private void UpdatePlayer()
     {
         wood += (minionWood.Count + 1) * 10;
-        food += (minionWood.Count + 1) * 10;
-        iron += (minionWood.Count + 1) * 10;
+        food += (minionFood.Count + 1) * 10;
+        iron += (minionIron.Count + 1) * 10;
         CheckDeath(minionWood);
         CheckDeath(minionIdle);
         CheckDeath(minionFood);
@@ -62,8 +60,8 @@ public class Player : MonoBehaviour {
         }
     }
 
-    public bool CanBuyMinion() {
-        if (population + number < maxpopulation 
+    public bool CanBuyMinion(int number) {
+        if (population + number <= maxpopulation 
             && wood > number * Minion.woodcost
             && food > number * Minion.foodcost
             && food > number * Minion.ironcost)
@@ -72,46 +70,58 @@ public class Player : MonoBehaviour {
         }
         return false;
     }
-    public void BuyMinion()
+    public void BuyMinionWood(int number)
     {
-        if (CanBuyMinion())
+        BuyMinion(number, minionWood);
+    }
+    public void BuyMinionIron(int number)
+    {
+        BuyMinion(number, minionIron);
+    }
+    public void BuyMinionFood(int number)
+    {
+        BuyMinion(number, minionFood);
+    }
+    private void BuyMinion(int number, List<Minion> minions)
+    {
+        if (CanBuyMinion(number))
         {
             wood -= number * Minion.woodcost;
             food -= number * Minion.foodcost;
-            food -= number * Minion.ironcost;
-            totalminion += number;
-            minionIdle.Add(new Minion());
-            population -= number;
+            iron -= number * Minion.ironcost;
+            for(int i = 0; i < number; i++)
+            {
+                minions.Add(new Minion());
+            }
+            population += number;
         }
     }
-
-
-    public bool CanBuyArcher()
+    public bool CanBuyArcher(int number)
     {
-        if (population + number < maxpopulation
-            && wood > number * Archer.woodcost
-            && food > number * Archer.foodcost
-            && food > number * Archer.ironcost)
+        if (population + number <= maxpopulation
+            && wood > number * Bowman.woodcost
+            && food > number * Bowman.foodcost
+            && food > number * Bowman.ironcost)
         {
             return true;
         }
         return false;
     }
 
-    public void BuyArcher()
+    public void BuyArcher(int number)
     {
-        if (CanBuyArcher())
+        if (CanBuyArcher(number))
         {
-            wood -= number * Archer.woodcost;
-            food -= number * Archer.foodcost;
-            food -= number * Archer.ironcost;
+            wood -= number * Bowman.woodcost;
+            food -= number * Bowman.foodcost;
+            food -= number * Bowman.ironcost;
             reserveArmy.archerCount += number;
             population -= number;
         }
     }
-    public bool CanBuyHorseman()
+    public bool CanBuyHorseman(int number)
     {
-        if (population + number < maxpopulation
+        if (population + number <= maxpopulation
             && wood > number * Horseman.woodcost
             && food > number * Horseman.foodcost
             && food > number * Horseman.ironcost)
@@ -120,9 +130,9 @@ public class Player : MonoBehaviour {
         }
         return false;
     }
-    public void BuyHorseman()
+    public void BuyHorseman(int number)
     {
-        if (CanBuyHorseman())
+        if (CanBuyHorseman(number))
         {
             wood -= number * Horseman.woodcost;
             food -= number * Horseman.foodcost;
@@ -131,9 +141,9 @@ public class Player : MonoBehaviour {
             population -= number;
         }
     }
-    public bool CanBuySwordsman()
+    public bool CanBuySwordsman(int number)
     {
-        if (population + number < maxpopulation
+        if (population + number <= maxpopulation
             && wood > number * Swordsman.woodcost
             && food > number * Swordsman.foodcost
             && food > number * Swordsman.ironcost)
@@ -142,9 +152,9 @@ public class Player : MonoBehaviour {
         }
         return false;
     }
-    public void BuySwordsman()
+    public void BuySwordsman(int number)
     {
-        if (CanBuyMinion())
+        if (CanBuyMinion(number))
         {
             wood -= number * Swordsman.woodcost;
             food -= number * Swordsman.foodcost;
@@ -206,21 +216,21 @@ public class Player : MonoBehaviour {
         }
     }
 
-    int maxBuyableMinion()
+    public int maxBuyableMinion()
     {
-        return (int)Math.Floor((double) Math.Min(food/Minion.foodcost,Math.Min(wood / Minion.woodcost, iron / Minion.ironcost)));
+        return (int)Math.Floor((double)Math.Min(Math.Min(food/Minion.foodcost,Math.Min(wood / Minion.woodcost, iron / Minion.ironcost)), maxpopulation - population));
     }
-    int maxBuyableArcher()
+    public int maxBuyableBowman()
     {
-        return (int)Math.Floor((double)Math.Min(food / Archer.foodcost, Math.Min(wood / Archer.woodcost, iron / Archer.ironcost)));
+        return (int)Math.Floor((double)Math.Min(Math.Min(food / Bowman.foodcost, Math.Min(wood / Bowman.woodcost, iron / Bowman.ironcost)), maxpopulation - population));
     }
-    int maxBuyableHorseman()
+    public int maxBuyableHorseman()
     {
-        return (int)Math.Floor((double)Math.Min(food / Horseman.foodcost, Math.Min(wood / Horseman.woodcost, iron / Horseman.ironcost)));
+        return (int)Math.Floor((double)Math.Min(Math.Min(food / Horseman.foodcost, Math.Min(wood / Horseman.woodcost, iron / Horseman.ironcost)), maxpopulation - population));
     }
-    int maxBuyableSwordsman()
+    public int maxBuyableSwordsman()
     {
-        return (int)Math.Floor((double)Math.Min(food / Swordsman.foodcost, Math.Min(wood / Swordsman.woodcost, iron / Swordsman.ironcost)));
+        return (int)Math.Floor((double)Math.Min(Math.Min(food / Swordsman.foodcost, Math.Min(wood / Swordsman.woodcost, iron / Swordsman.ironcost)),maxpopulation-population));
     }
     // Update is called once per frame
     void Update () {
