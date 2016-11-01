@@ -20,17 +20,23 @@ public class UnitNumber : MonoBehaviour {
 	}
 
     public void UpdateUnitNumber(float number) {
-        int intNumber = (int) number;
-        intNumber = Mathf.Max(this._minUnitNumber, intNumber);
-        intNumber = Mathf.Min(this._maxUnitNumber, intNumber);
-        string units;
+        if (_text != null)
+        {
+            int intNumber = (int)number;
+            intNumber = Mathf.Max(this._minUnitNumber, intNumber);
+            intNumber = Mathf.Min(this._maxUnitNumber, intNumber);
+            string units;
 
-        if (intNumber > 1) {
-            units = "units";
-        } else {
-            units = "unit";
+            if (intNumber > 1)
+            {
+                units = "units";
+            }
+            else
+            {
+                units = "unit";
+            }
+
+            this._text.text = units;
         }
-
-        this._text.text = units;
     }
 }

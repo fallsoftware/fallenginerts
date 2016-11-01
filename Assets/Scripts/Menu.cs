@@ -13,11 +13,13 @@ public class Menu : MonoBehaviour {
 
     public void HandleMenu() {
         this.gameObject.SetActive(!this.gameObject.activeSelf);
+        this.gameObject.SetActive(!this.gameObject.activeSelf);
+        this.gameObject.SetActive(!this.gameObject.activeSelf);
 
-        if (this.gameObject.activeSelf) {
-            Time.timeScale = 0f;
-        } else {
-            Time.timeScale = this._timeScale;
-        }
+        /* if (this.gameObject.activeSelf) {
+             Time.timeScale = 0f;
+         } else {
+             Time.timeScale = this._timeScale;
+         }*/
     }
 }

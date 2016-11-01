@@ -14,18 +14,14 @@ public class Player : MonoBehaviour {
     public int population=0;
     public int maxpopulation=200;
     public HudManager minionCount;
-    private List<Minion> minionIdle;
-    private List<Minion> minionWood;
-    private List<Minion> minionIron;
-    private List<Minion> minionFood;
+    private List<Minion> minionIdle = new List<Minion>();
+    private List<Minion> minionWood = new List<Minion>();
+    private List<Minion> minionIron = new List<Minion>();
+    private List<Minion> minionFood = new List<Minion>();
     private Army reserveArmy;
 
     // Use this for initialization
     void Start () {
-        minionIdle = new List<Minion>();
-        minionWood = new List<Minion>();
-        minionIron = new List<Minion>();
-        minionFood = new List<Minion>();
         reserveArmy = new global::Army();
         InvokeRepeating("UpdatePlayer", 0, 1.0f);
 
@@ -116,7 +112,7 @@ public class Player : MonoBehaviour {
             food -= number * Bowman.foodcost;
             food -= number * Bowman.ironcost;
             reserveArmy.archerCount += number;
-            population -= number;
+            population += number;
         }
     }
     public bool CanBuyHorseman(int number)
@@ -138,7 +134,7 @@ public class Player : MonoBehaviour {
             food -= number * Horseman.foodcost;
             food -= number * Horseman.ironcost;
             reserveArmy.horsemanCount += number;
-            population -= number;
+            population += number;
         }
     }
     public bool CanBuySwordsman(int number)
@@ -160,7 +156,7 @@ public class Player : MonoBehaviour {
             food -= number * Swordsman.foodcost;
             food -= number * Swordsman.ironcost;
             reserveArmy.swordsmanCount += number;
-            population -= number;
+            population += number;
         }
     }
     public int getNumberIdle()
@@ -170,7 +166,6 @@ public class Player : MonoBehaviour {
     public int getNumberWood()
     {
         return minionWood.Count;
-
     }
     public int getNumberIron()
     {
@@ -181,15 +176,15 @@ public class Player : MonoBehaviour {
         return minionFood.Count;
     }
 
-    void  setMinionWood(int number)
+    public void  setMinionWood(int number)
     {
         setMinionList(minionWood, number);
     }
-    void setMinionFood(int number)
+    public void setMinionFood(int number)
     {
         setMinionList(minionFood, number);
     }
-    void setMinionIron(int number)
+    public void setMinionIron(int number)
     {
         setMinionList(minionIron, number);
     }

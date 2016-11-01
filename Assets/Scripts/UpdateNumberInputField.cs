@@ -23,23 +23,28 @@ public class UpdateNumberInputField : MonoBehaviour {
     }
 
 
-    public void UpdateNumber(string value) {
-        int number = 1;
+    public void UpdateNumber(string value)
+    {
+        if (_inputField != null) {
+            int number = 1;
 
-        Int32.TryParse(value, out number);
+            Int32.TryParse(value, out number);
 
-        number = Mathf.Max(this._min, number);
-        number = Mathf.Min(this._max, number);
-
-        this._inputField.text = number.ToString();
+            number = Mathf.Max(this._min, number);
+            number = Mathf.Min(this._max, number);
+            this._inputField.text = number.ToString();
+        }
     }
 
     public void UpdateNumberFromFloat(float value) {
-        int number = (int) value;
+        if (_inputField != null)
+        {
+            int number = (int)value;
 
-        number = Mathf.Max(this._min, number);
-        number = Mathf.Min(this._max, number);
+            number = Mathf.Max(this._min, number);
+            number = Mathf.Min(this._max, number);
 
-        this._inputField.text = number.ToString();
+            this._inputField.text = number.ToString();
+        }
     }
 }
