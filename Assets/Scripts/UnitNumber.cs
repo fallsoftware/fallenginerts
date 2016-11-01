@@ -26,9 +26,9 @@ public class UnitNumber : MonoBehaviour {
         string units;
 
         if (intNumber > 1) {
-            units = " units";
+            units = "units";
         } else {
-            units = " unit";
+            units = "unit";
         }
 
         this._text.text = units;
