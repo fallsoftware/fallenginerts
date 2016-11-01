@@ -57,6 +57,7 @@ public class Player : MonoBehaviour {
         }
         foreach (Minion item in todie)
         {
+            population--;
             minions.Remove(item);
         }
     }
