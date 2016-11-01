@@ -9,4 +9,6 @@ class Swordsman: MonoBehaviour
     public static int woodcost = 10;
     public static int ironcost = 50;
     public static int foodcost = 30;
+    public static int populationcost = 1;
+
 }

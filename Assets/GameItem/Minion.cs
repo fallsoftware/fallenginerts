@@ -11,6 +11,8 @@ class Minion
     public static int woodcost = 20;
     public static int ironcost = 20;
     public static int foodcost = 20;
+    public static int populationcost = 1;
+
     /// <summary>
     /// update the minion so it lived 1 unit more
     /// </summary>

@@ -8,12 +8,12 @@ public class Player : MonoBehaviour {
 
     private int totalminion;
     public int number;
-    public int wood;
-    public int iron;
-    public int food;
-    public int population;
+    public int wood=0;
+    public int iron=0;
+    public int food=0;
+    public int population=0;
     public int maxpopulation=200;
-    public Text minionCount;
+    public HudManager minionCount;
     private List<Minion> minionIdle;
     private List<Minion> minionWood;
     private List<Minion> minionIron;
@@ -33,11 +33,11 @@ public class Player : MonoBehaviour {
 
     }
 
-    void UpdatePlayer()
+    private void UpdatePlayer()
     {
-        wood += minionWood.Count * 10;
-        food += minionFood.Count * 10;
-        iron += minionIron.Count * 10;
+        wood += (minionWood.Count + 1) * 10;
+        food += (minionWood.Count + 1) * 10;
+        iron += (minionWood.Count + 1) * 10;
         CheckDeath(minionWood);
         CheckDeath(minionIdle);
         CheckDeath(minionFood);
@@ -82,7 +82,6 @@ public class Player : MonoBehaviour {
             totalminion += number;
             minionIdle.Add(new Minion());
             population -= number;
-            minionCount.text = totalminion.ToString();
         }
     }
 
@@ -154,20 +153,20 @@ public class Player : MonoBehaviour {
             population -= number;
         }
     }
-    int getNumberIdle()
+    public int getNumberIdle()
     {
         return minionIdle.Count;
     }
-    int getNumberWood()
+    public int getNumberWood()
     {
         return minionWood.Count;
 
     }
-    int getNumberIron()
+    public int getNumberIron()
     {
         return minionIron.Count;
     }
-    int getNumberFood()
+    public int getNumberFood()
     {
         return minionFood.Count;
     }

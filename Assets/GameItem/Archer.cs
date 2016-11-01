@@ -9,4 +9,5 @@ class Archer : MonoBehaviour
     public static int woodcost = 50;
     public static int ironcost = 10;
     public static int foodcost = 30;
+    public static int populationcost = 1;
 }
