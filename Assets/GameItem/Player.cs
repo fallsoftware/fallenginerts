@@ -18,7 +18,7 @@ public class Player : MonoBehaviour {
     private List<Minion> minionWood = new List<Minion>();
     private List<Minion> minionIron = new List<Minion>();
     private List<Minion> minionFood = new List<Minion>();
-    private Army reserveArmy;
+    public Army reserveArmy;
 
     // Use this for initialization
     void Start () {
