@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
-
+public enum UnitType {SWORDSMAN,BOWMAN,HORSEMAN };
 class Army
 {
-    public int archerCount;
+    public int bowmanCount;
     public int swordsmanCount;
     public int horsemanCount;
     public bool moving;

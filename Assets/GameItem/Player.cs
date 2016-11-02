@@ -92,7 +92,7 @@ public class Player : MonoBehaviour {
             population += number;
         }
     }
-    public bool CanBuyArcher(int number)
+    public bool CanBuyBowman(int number)
     {
         if (population + number <= maxpopulation
             && wood > number * Bowman.woodcost
@@ -104,14 +104,14 @@ public class Player : MonoBehaviour {
         return false;
     }
 
-    public void BuyArcher(int number)
+    public void BuyBowman(int number)
     {
-        if (CanBuyArcher(number))
+        if (CanBuyBowman(number))
         {
             wood -= number * Bowman.woodcost;
             food -= number * Bowman.foodcost;
             food -= number * Bowman.ironcost;
-            reserveArmy.archerCount += number;
+            reserveArmy.bowmanCount += number;
             population += number;
         }
     }

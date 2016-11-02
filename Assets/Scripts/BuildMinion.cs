@@ -15,7 +15,7 @@ public class BuildMinion : MonoBehaviour {
     public UpdateNumberInputField inputfield;
 	// Use this for initialization
 	void Start () {
-        SetRessourceToFood();
+        SetRessourceToWood();
     }
 	public void SetRessourceToIron()
     {
@@ -43,7 +43,6 @@ public class BuildMinion : MonoBehaviour {
             number * (int)Minion.PRICE.IRON,
             number * (int)Minion.PRICE.WOOD,
             number * (int)Minion.PRICE.POPULATION);
-        float   woodcost = connectedSlider.value* (float) Minion.PRICE.FOOD;
     }
     public void BuyMinion()
     {

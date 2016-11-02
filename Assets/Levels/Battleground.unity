@@ -256,8 +256,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1805536615}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.01, y: 0}
+  m_AnchorMax: {x: 0.01, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1844,7 +1844,7 @@ RectTransform:
   m_Father: {fileID: 650249417}
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.01, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2188,7 +2188,7 @@ RectTransform:
   m_Father: {fileID: 1271961329}
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2616,7 +2616,7 @@ RectTransform:
   m_Father: {fileID: 460868874}
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.01, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3347,6 +3347,7 @@ GameObject:
   - 224: {fileID: 675411492}
   - 222: {fileID: 675411494}
   - 114: {fileID: 675411493}
+  - 114: {fileID: 675411495}
   m_Layer: 5
   m_Name: CostPanel
   m_TagString: Untagged
@@ -3406,6 +3407,21 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 675411491}
+--- !u!114 &675411495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 675411491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1885120a191de464fa9903b5bc8ff33d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  woodText: {fileID: 1446005143}
+  ironText: {fileID: 1270965157}
+  foodText: {fileID: 535232196}
+  populationText: {fileID: 1283668373}
 --- !u!1 &690097088
 GameObject:
   m_ObjectHideFlags: 0
@@ -4095,8 +4111,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 60238711}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.01, y: 0}
+  m_AnchorMax: {x: 0.01, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4151,7 +4167,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &997853539
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4587,13 +4603,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1157116433}
-        m_MethodName: set_sprite
-        m_Mode: 2
+      - m_Target: {fileID: 1562310669}
+        m_MethodName: SetUnitToBowman
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 21300000, guid: a151e2dc122420c499dd6ef42fb758e2,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -4919,7 +4934,7 @@ RectTransform:
   m_Father: {fileID: 295513792}
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -5138,13 +5153,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1157116433}
-        m_MethodName: set_sprite
-        m_Mode: 2
+      - m_Target: {fileID: 1562310669}
+        m_MethodName: SetUnitToSwordsman
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 21300000, guid: 0f2e886322bf42248a2e992482ef2795,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -6962,8 +6976,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1604124813}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.01, y: 0}
+  m_AnchorMax: {x: 0.01, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -7874,13 +7888,14 @@ GameObject:
   - 222: {fileID: 1562310667}
   - 114: {fileID: 1562310666}
   - 114: {fileID: 1562310668}
+  - 114: {fileID: 1562310669}
   m_Layer: 5
   m_Name: BuildUnit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1562310665
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7947,6 +7962,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e8f613d3f2b0934a896a2711d6bc007, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1562310669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1562310664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bc1c79b0354e5e449553fbbdaab7219, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 381878221}
+  connectedSlider: {fileID: 1828700744}
+  connectedImage: {fileID: 1157116433}
+  bowSprite: {fileID: 21300000, guid: a151e2dc122420c499dd6ef42fb758e2, type: 3}
+  swordSprite: {fileID: 21300000, guid: 0f2e886322bf42248a2e992482ef2795, type: 3}
+  horseSprite: {fileID: 21300000, guid: dc3b9f639bef04742ad67f1fd453d479, type: 3}
+  connectedCostPanel: {fileID: 675411495}
+  inputfield: {fileID: 2118708247}
 --- !u!1 &1596237608
 GameObject:
   m_ObjectHideFlags: 0
@@ -9286,13 +9320,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1157116433}
-        m_MethodName: set_sprite
-        m_Mode: 2
+      - m_Target: {fileID: 1562310669}
+        m_MethodName: SetUnitToHorseman
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 21300000, guid: dc3b9f639bef04742ad67f1fd453d479,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -9500,7 +9533,7 @@ MonoBehaviour:
   m_FillRect: {fileID: 1108479422}
   m_HandleRect: {fileID: 405097398}
   m_Direction: 0
-  m_MinValue: 1
+  m_MinValue: 0
   m_MaxValue: 100
   m_WholeNumbers: 1
   m_Value: 1
@@ -9886,7 +9919,7 @@ RectTransform:
   m_Father: {fileID: 886349813}
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.01, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
