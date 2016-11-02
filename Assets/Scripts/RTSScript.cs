@@ -5,6 +5,9 @@ public class RTSScript : MonoBehaviour {
     public int ScrollArea = 5;
     public float ScrollSpeed = 500;
     public float DragSpeed = 20;
+    public float MinZoom = 150;
+    public float MaxZoom = 30;
+    public float ZoomSensitivity = 10000000;
     public GameObject Battleground;
     private Bounds _maxSize;
     private Camera _camera;
@@ -87,5 +90,16 @@ public class RTSScript : MonoBehaviour {
         }
 
         this.transform.position = new Vector3(x, y, z);
+
+        // Checking zoom
+        float newZoom = this._camera.orthographicSize;
+
+        if (Mathf.Abs(Input.GetAxis("Mouse ScrollWheel")) > 0) {
+            int a = 1;
+        }
+
+        newZoom += Input.GetAxis("Mouse ScrollWheel") * this.ZoomSensitivity;
+        newZoom = Mathf.Clamp(newZoom, this.MaxZoom, this.MinZoom);
+        this._camera.orthographicSize = newZoom;
     }
 }
