@@ -98,7 +98,7 @@ public class RTSScript : MonoBehaviour {
             int a = 1;
         }
 
-        newZoom += Input.GetAxis("Mouse ScrollWheel") * this.ZoomSensitivity;
+        newZoom += -Input.GetAxis("Mouse ScrollWheel") * this.ZoomSensitivity;
         newZoom = Mathf.Clamp(newZoom, this.MaxZoom, this.MinZoom);
         this._camera.orthographicSize = newZoom;
     }

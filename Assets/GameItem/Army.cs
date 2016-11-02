@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 using System;
 public enum UnitType {SWORDSMAN,BOWMAN,HORSEMAN };
-public class Army : MonoBehaviour
+public class Army
 {
     public int bowmanCount;
     public int swordsmanCount;
@@ -61,7 +61,7 @@ public class Army : MonoBehaviour
     {
         if (TotalUnit == 0)
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
     }
     // Update is called once per frame

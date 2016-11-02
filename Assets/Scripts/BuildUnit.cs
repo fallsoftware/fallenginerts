@@ -82,7 +82,7 @@ public class BuildUnit : MonoBehaviour
             number * woodprice,
             number * populationprice);
     }
-    public void BuyMinion()
+    public void BuyUnit()
     {
         switch (selectedUnit)
         {

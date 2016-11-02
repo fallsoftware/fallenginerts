@@ -541,7 +541,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1043471483}
         m_MethodName: SetRessourceToIron
         m_Mode: 1
         m_Arguments:
@@ -734,7 +734,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1043471483}
         m_MethodName: SetRessourceToWood
         m_Mode: 1
         m_Arguments:
@@ -2070,6 +2070,7 @@ MonoBehaviour:
   population: 0
   maxpopulation: 200
   minionCount: {fileID: 0}
+  reserveArmy: {fileID: 0}
 --- !u!1 &388927614
 GameObject:
   m_ObjectHideFlags: 0
@@ -2153,9 +2154,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 388927614}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1f505b7c4f87f34399b3108c9ad1606, type: 3}
+  m_Script: {fileID: 11500000, guid: d08fa5785115b154baaa9de82a0aa909, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 381878221}
 --- !u!1 &405097397
 GameObject:
   m_ObjectHideFlags: 0
@@ -2186,8 +2188,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1271961329}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.01, y: 0}
+  m_AnchorMax: {x: 0.01, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3011,23 +3013,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1043471483}
         m_MethodName: SetRessourceToFood
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3414,7 +3405,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 675411491}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1885120a191de464fa9903b5bc8ff33d, type: 3}
+  m_Script: {fileID: 11500000, guid: 610f953220388c240a7e8a13fee7c554, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   woodText: {fileID: 1446005143}
@@ -4239,7 +4230,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 997853538}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc8487d618c435a4ab34bc51b57b3b69, type: 3}
+  m_Script: {fileID: 11500000, guid: f7912bd72dbc9b9419352ae457f62473, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 381878221}
@@ -4403,6 +4394,7 @@ GameObject:
   - 222: {fileID: 1043471481}
   - 114: {fileID: 1043471480}
   - 114: {fileID: 1043471482}
+  - 114: {fileID: 1043471483}
   m_Layer: 5
   m_Name: BuildMinion
   m_TagString: Untagged
@@ -4474,6 +4466,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e8f613d3f2b0934a896a2711d6bc007, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1043471483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1043471478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06066e328aee7e647a0d5a4cc0e23cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 381878221}
+  connectedSlider: {fileID: 1086415087}
+  connectedImage: {fileID: 707803082}
+  woodSprite: {fileID: 21300000, guid: beaec3d33949b1e4abdea2329be8fafa, type: 3}
+  ironSprite: {fileID: 21300000, guid: 452d5569bb699b042961d2435aac1de7, type: 3}
+  foodSprite: {fileID: 21300000, guid: c9da0f795a6dff9439b11b2bf232edf1, type: 3}
+  connectedCostPanel: {fileID: 1382344173}
+  inputfield: {fileID: 2071022583}
 --- !u!1 &1044156357
 GameObject:
   m_ObjectHideFlags: 0
@@ -4913,7 +4924,7 @@ RectTransform:
   m_Father: {fileID: 295513792}
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.01, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -5152,17 +5163,6 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Swordsman
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 11500000, guid: 3502e4da4b3332f419fe4d9d17deb9a4, type: 3}
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -5677,7 +5677,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1043471483}
         m_MethodName: BuyMinion
         m_Mode: 1
         m_Arguments:
@@ -6831,9 +6831,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1382344169}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1885120a191de464fa9903b5bc8ff33d, type: 3}
+  m_Script: {fileID: 11500000, guid: 610f953220388c240a7e8a13fee7c554, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  woodText: {fileID: 337149489}
+  ironText: {fileID: 1705243657}
+  foodText: {fileID: 1497547094}
+  populationText: {fileID: 690097090}
 --- !u!1 &1411703999
 GameObject:
   m_ObjectHideFlags: 0
@@ -7249,7 +7253,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1490979109}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1562310669}
+        m_MethodName: BuyUnit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1490979109
@@ -7937,7 +7952,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1562310665
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8012,7 +8027,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1562310664}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bc1c79b0354e5e449553fbbdaab7219, type: 3}
+  m_Script: {fileID: 11500000, guid: a27b91089a59e0048939c8d12e9ba2d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 381878221}
@@ -8865,6 +8880,9 @@ MonoBehaviour:
   ScrollArea: 5
   ScrollSpeed: 500
   DragSpeed: 20
+  MinZoom: 150
+  MaxZoom: 30
+  ZoomSensitivity: 100
   Battleground: {fileID: 1417852361}
 --- !u!81 &1709587264
 AudioListener:

@@ -36,16 +36,16 @@ public class AssignMinions : MonoBehaviour {
         foodSlider.maxValue = player.getNumberFood() + idleminion;
         ironSlider.maxValue = player.getNumberIron() + idleminion;
     }
-    void SetWood()
+    public void SetWood()
     {
         player.setMinionWood((int)woodSlider.value);
     }
-    void SetIron()
+    public void SetIron()
     {
         player.setMinionIron((int)ironSlider.value);
 
     }
-    void SetFood()
+    public void SetFood()
     {
         player.setMinionFood((int)foodSlider.value);
 
