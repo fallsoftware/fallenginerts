@@ -3701,7 +3701,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 793853188}
   - 212: {fileID: 793853190}
-  - 61: {fileID: 793853189}
   - 114: {fileID: 793853191}
   m_Layer: 0
   m_Name: PlayerUnitBuilding2
@@ -3723,20 +3722,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1417852362}
   m_RootOrder: 2
---- !u!61 &793853189
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 793853187}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Size: {x: 6, y: 6}
 --- !u!212 &793853190
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3783,6 +3768,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UnitBuildingPanel: {fileID: 1562310664}
   Battleground: {fileID: 1417852361}
+  SelectedColor: {r: 0, g: 1, b: 0.6666667, a: 1}
+  DefaultColor: {r: 0, g: 0, b: 0, a: 0}
+  MouseManager: {fileID: 0}
+  SpriteRenderer: {fileID: 0}
 --- !u!1 &794492278
 GameObject:
   m_ObjectHideFlags: 0
@@ -4339,7 +4328,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1001507346}
   - 212: {fileID: 1001507349}
-  - 61: {fileID: 1001507348}
   - 114: {fileID: 1001507347}
   m_Layer: 0
   m_Name: PlayerUnitBuilding3
@@ -4374,20 +4362,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UnitBuildingPanel: {fileID: 1562310664}
   Battleground: {fileID: 1417852361}
---- !u!61 &1001507348
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1001507345}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Size: {x: 6, y: 6}
+  SelectedColor: {r: 0, g: 1, b: 0.6666667, a: 1}
+  DefaultColor: {r: 0, g: 0, b: 0, a: 0}
+  MouseManager: {fileID: 0}
+  SpriteRenderer: {fileID: 0}
 --- !u!212 &1001507349
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7105,7 +7083,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1385264046}
   - 212: {fileID: 1385264049}
-  - 61: {fileID: 1385264048}
   - 114: {fileID: 1385264047}
   m_Layer: 0
   m_Name: PlayerUnitBuilding1
@@ -7140,20 +7117,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UnitBuildingPanel: {fileID: 1562310664}
   Battleground: {fileID: 1417852361}
---- !u!61 &1385264048
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1385264045}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Size: {x: 6, y: 6}
+  SelectedColor: {r: 0, g: 1, b: 0.6666667, a: 1}
+  DefaultColor: {r: 0, g: 0, b: 0, a: 0}
+  MouseManager: {fileID: 0}
+  SpriteRenderer: {fileID: 0}
 --- !u!212 &1385264049
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7278,7 +7245,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1417852361}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1396, y: 499, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7308,6 +7275,11 @@ MonoBehaviour:
   - {fileID: 1562310664}
   - {fileID: 1043471478}
   - {fileID: 997853538}
+  BuildingElements:
+  - {fileID: 1499103250}
+  - {fileID: 1385264045}
+  - {fileID: 793853187}
+  - {fileID: 1001507345}
   MouseOnObject: 0
 --- !u!61 &1417852364
 BoxCollider2D:
@@ -7318,7 +7290,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: -1396.0044, y: -498.99673}
   serializedVersion: 2
@@ -7739,7 +7711,6 @@ GameObject:
   - 4: {fileID: 1499103251}
   - 212: {fileID: 1499103252}
   - 114: {fileID: 1499103253}
-  - 61: {fileID: 1499103254}
   m_Layer: 0
   m_Name: PlayerMainBuilding
   m_TagString: Untagged
@@ -7804,23 +7775,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c8738dda7f99ca418b560384e33fe0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UnitBuildingPanel: {fileID: 1562310664}
+  Battleground: {fileID: 1417852361}
+  SelectedColor: {r: 0, g: 1, b: 0.6666667, a: 1}
+  DefaultColor: {r: 0, g: 0, b: 0, a: 0}
+  MouseManager: {fileID: 0}
+  SpriteRenderer: {fileID: 0}
   MinionBuildingPanel: {fileID: 1043471478}
   MinionAssignPanel: {fileID: 997853538}
-  Battleground: {fileID: 1417852361}
---- !u!61 &1499103254
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1499103250}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Size: {x: 6, y: 6}
 --- !u!1 &1505438284
 GameObject:
   m_ObjectHideFlags: 0

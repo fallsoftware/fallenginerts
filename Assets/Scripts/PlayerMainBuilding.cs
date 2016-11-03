@@ -2,15 +2,13 @@
 using System.Collections;
 using UnityEngine.EventSystems;
 
-public class PlayerMainBuilding : MonoBehaviour {
+public class PlayerMainBuilding : UnitBuilding {
     public GameObject MinionBuildingPanel;
     public GameObject MinionAssignPanel;
-    public GameObject Battleground;
-    private MouseManager _mouseManager;
 
-	void Start () {
-	    this._mouseManager = this.Battleground.GetComponent<MouseManager>();
-	}
+    void Start () {
+        this.InitializeFields();
+    }
 	
 	void Update () {
 	
@@ -21,7 +19,7 @@ public class PlayerMainBuilding : MonoBehaviour {
 
         if (!this.MinionBuildingPanel.activeSelf
             || !this.MinionAssignPanel.activeSelf) {
-            this._mouseManager.MouseOnObject = true;
+            this.MouseManager.MouseOnObject = true;
         }
     }
 
@@ -30,11 +28,13 @@ public class PlayerMainBuilding : MonoBehaviour {
 
         if (!this.MinionBuildingPanel.activeSelf) {
             if (!this.MinionAssignPanel.activeSelf) {
-                this._mouseManager.ShutAllPanels();
+                this.MouseManager.ShutAllPanels();
+                this.MouseManager.ResetSpriteRenderers();
                 this.MinionBuildingPanel.SetActive(true);
+                this.SetSelectedColorState();
             }
         }
 
-        this._mouseManager.MouseOnObject = false;
+        this.MouseManager.MouseOnObject = false;
     }
 }

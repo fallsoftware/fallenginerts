@@ -93,11 +93,6 @@ public class RTSScript : MonoBehaviour {
 
         // Checking zoom
         float newZoom = this._camera.orthographicSize;
-
-        if (Mathf.Abs(Input.GetAxis("Mouse ScrollWheel")) > 0) {
-            int a = 1;
-        }
-
         newZoom += -Input.GetAxis("Mouse ScrollWheel") * this.ZoomSensitivity;
         newZoom = Mathf.Clamp(newZoom, this.MaxZoom, this.MinZoom);
         this._camera.orthographicSize = newZoom;
