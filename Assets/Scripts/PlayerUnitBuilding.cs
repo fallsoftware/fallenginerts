@@ -1,14 +1,11 @@
 ﻿using UnityEngine;
-using System.Collections;
 using UnityEngine.EventSystems;
 
-public class PlayerUnitBuilding : MonoBehaviour {
+public class PlayerUnitBuilding : UnitBuilding {
     public GameObject UnitBuildingPanel;
-    public GameObject Battleground;
-    private MouseManager _mouseManager;
 
     void Start() {
-        this._mouseManager = this.Battleground.GetComponent<MouseManager>();
+        this.InitializeFields();
     }
 
     void Update() {
@@ -19,18 +16,20 @@ public class PlayerUnitBuilding : MonoBehaviour {
         if (EventSystem.current.IsPointerOverGameObject()) return;
 
         if (!this.UnitBuildingPanel.activeSelf) {
-            this._mouseManager.MouseOnObject = true;
+            this.MouseManager.MouseOnObject = true;
         }
     }
 
     void OnMouseUp() {
         if (EventSystem.current.IsPointerOverGameObject()) return;
+        this.MouseManager.ResetSpriteRenderers();
 
         if (!this.UnitBuildingPanel.activeSelf) {
-            this._mouseManager.ShutAllPanels();
+            this.MouseManager.ShutAllPanels();
             this.UnitBuildingPanel.SetActive(true);
         }
 
-        this._mouseManager.MouseOnObject = false;
+        this.SetSelectedColorState();
+        this.MouseManager.MouseOnObject = false;
     }
 }
