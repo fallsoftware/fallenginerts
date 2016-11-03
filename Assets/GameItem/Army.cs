@@ -5,15 +5,19 @@ using System;
 public enum UnitType {SWORDSMAN,BOWMAN,HORSEMAN };
 public class Army
 {
-    public int bowmanCount;
-    public int swordsmanCount;
-    public int horsemanCount;
-    public bool moving;
+    public int bowmanCount=0;
+    public int swordsmanCount=0;
+    public int horsemanCount=0;
     public int TotalUnit { get { return swordsmanCount + horsemanCount + bowmanCount; }}
     public Player player;
-
+    public Army(Player _player)
+    {
+        this.player = _player;
+    }
     void ConfrontArmy(Army otherArmy)
     {
+        int temptotalbegin1 = this.TotalUnit;
+        int temptotalbegin2 = otherArmy.TotalUnit;
         int tempbowman = bowmanCount;
         int tempswordsman = swordsmanCount;
         int temphorseman = horsemanCount;
@@ -52,6 +56,8 @@ public class Army
                 }
             }
         }
+        player.population -= (temptotalbegin1 - TotalUnit);
+        otherArmy.player.population -= (temptotalbegin2 - TotalUnit);
         CheckDestruction();
         otherArmy.CheckDestruction();
 

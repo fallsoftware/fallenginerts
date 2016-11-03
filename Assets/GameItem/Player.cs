@@ -15,7 +15,6 @@ public class Player : MonoBehaviour {
     public static int maxpopulation=200;
     public static int baseregen = 15;
     public static int collectbyminion=10;
-    public HudManager minionCount;
     private List<Minion> minionIdle = new List<Minion>();
     private List<Minion> minionWood = new List<Minion>();
     private List<Minion> minionIron = new List<Minion>();
@@ -24,7 +23,7 @@ public class Player : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        reserveArmy = new global::Army();
+        reserveArmy = new global::Army(this);
         InvokeRepeating("UpdatePlayer", 0, 1.0f);
 
     }

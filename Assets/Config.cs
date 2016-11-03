@@ -6,6 +6,8 @@ using UnityEngine;
 
 class Config : MonoBehaviour
 {
+    public int speed = 1;
+    public float refreshingRate = 0.2f;
     public int minionCostWood = 20;
     public int minionCostIron = 20;
     public int minionCostFood = 20;
@@ -29,6 +31,8 @@ class Config : MonoBehaviour
     public int UnitBuildingRespawnTime=200;
     void Start()
     {
+        MovingArmy.speed = speed;
+        MovingArmy.refreshingRate = refreshingRate;
         Minion.woodcost=minionCostWood;
         Minion.ironcost=minionCostIron;
         Minion.foodcost = minionCostFood;

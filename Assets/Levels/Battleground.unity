@@ -554,7 +554,7 @@ GameObject:
   - 222: {fileID: 80704869}
   - 114: {fileID: 80704868}
   m_Layer: 5
-  m_Name: IronUnitNumberInputFieldText
+  m_Name: BowmanNumberInputFieldText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -942,7 +942,7 @@ GameObject:
   - 222: {fileID: 128596044}
   - 114: {fileID: 128596043}
   - 114: {fileID: 128596042}
-  - 114: {fileID: 128596041}
+  - 114: {fileID: 128596045}
   m_Layer: 5
   m_Name: ArmyLauncher
   m_TagString: Untagged
@@ -970,24 +970,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 225}
   m_SizeDelta: {x: 0, y: 450}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &128596041
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 128596039}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7912bd72dbc9b9419352ae457f62473, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 381878221}
-  woodSlider: {fileID: 1018875984}
-  ironSlider: {fileID: 1456536994}
-  foodSlider: {fileID: 418791902}
-  woodInput: {fileID: 1657786197}
-  ironInput: {fileID: 1381683058}
-  foodInput: {fileID: 979406674}
 --- !u!114 &128596042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1032,6 +1014,25 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 128596039}
+--- !u!114 &128596045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 128596039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 188433724e149b14ca708f4abad8e75d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 381878221}
+  swordsmanSlider: {fileID: 1018875984}
+  bowmanSlider: {fileID: 1456536994}
+  horsemanSlider: {fileID: 418791902}
+  army: {fileID: 1000010377405282, guid: de10e1273ee4e144b9a12b4d7f197f47, type: 2}
+  swordsmanInput: {fileID: 1657786197}
+  bowmanInput: {fileID: 1381683058}
+  horsemanInput: {fileID: 979406674}
 --- !u!1 &139823344
 GameObject:
   m_ObjectHideFlags: 0
@@ -1125,6 +1126,34 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &142060086
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 142060087}
+  m_Layer: 0
+  m_Name: Lane3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &142060087
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 142060086}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1525, y: -550, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1805149196}
+  m_RootOrder: 6
 --- !u!1 &145636722
 GameObject:
   m_ObjectHideFlags: 0
@@ -2513,6 +2542,34 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 337149487}
+--- !u!1 &378996830
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 378996831}
+  m_Layer: 0
+  m_Name: Lane2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &378996831
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 378996830}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1525, y: -500, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1805149196}
+  m_RootOrder: 5
 --- !u!1 &380435608
 GameObject:
   m_ObjectHideFlags: 0
@@ -2704,11 +2761,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d0fbd7dcded63547b41effab8ef57b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wood: 0
-  iron: 0
-  food: 0
+  wood: 1000
+  iron: 1000
+  food: 1000
   population: 0
-  minionCount: {fileID: 0}
 --- !u!1 &388927614
 GameObject:
   m_ObjectHideFlags: 0
@@ -2875,7 +2931,7 @@ GameObject:
   - 114: {fileID: 418791902}
   - 114: {fileID: 418791901}
   m_Layer: 5
-  m_Name: FoodNumberSlider
+  m_Name: KnightNumberSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2981,7 +3037,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 128596041}
+      - m_Target: {fileID: 0}
         m_MethodName: SetFood
         m_Mode: 1
         m_Arguments:
@@ -4356,7 +4412,7 @@ GameObject:
   - 114: {fileID: 584577254}
   - 114: {fileID: 584577253}
   m_Layer: 5
-  m_Name: FoodUnitNumber
+  m_Name: KnightNumber
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6383,7 +6439,7 @@ GameObject:
   - 114: {fileID: 979406675}
   - 114: {fileID: 979406674}
   m_Layer: 5
-  m_Name: FoodUnitNumberInputField
+  m_Name: KnightNumberInputField
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7008,7 +7064,7 @@ GameObject:
   - 114: {fileID: 1018875984}
   - 114: {fileID: 1018875982}
   m_Layer: 5
-  m_Name: WoodNumberSlider
+  m_Name: SwordsmanNumberSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7114,8 +7170,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 128596041}
-        m_MethodName: SetWood
+      - m_Target: {fileID: 128596039}
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7174,7 +7230,7 @@ GameObject:
   - 222: {fileID: 1023889647}
   - 114: {fileID: 1023889646}
   m_Layer: 5
-  m_Name: WoodUnitNumberInputFieldText
+  m_Name: SwordsmanNumberInputFieldText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7425,7 +7481,7 @@ GameObject:
   - 222: {fileID: 1038561482}
   - 114: {fileID: 1038561481}
   m_Layer: 5
-  m_Name: FoodUnitNumberInputFieldText
+  m_Name: KnightNumberInputFieldText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8900,7 +8956,7 @@ GameObject:
   - 114: {fileID: 1138524151}
   - 114: {fileID: 1138524150}
   m_Layer: 5
-  m_Name: WoodUnitNumber
+  m_Name: SwordsmanNumber
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11038,7 +11094,7 @@ GameObject:
   - 114: {fileID: 1381683059}
   - 114: {fileID: 1381683058}
   m_Layer: 5
-  m_Name: IronUnitNumberInputField
+  m_Name: BowmanNumberInputField
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11622,7 +11678,7 @@ GameObject:
   - 114: {fileID: 1456536994}
   - 114: {fileID: 1456536992}
   m_Layer: 5
-  m_Name: IronNumberSlider
+  m_Name: BowmanNumberSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11728,7 +11784,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 128596041}
+      - m_Target: {fileID: 0}
         m_MethodName: SetIron
         m_Mode: 1
         m_Arguments:
@@ -12541,7 +12597,7 @@ GameObject:
   - 114: {fileID: 1525197050}
   - 114: {fileID: 1525197049}
   m_Layer: 5
-  m_Name: IronUnitNumber
+  m_Name: BowmanUnitNumber
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12735,6 +12791,7 @@ GameObject:
   - 224: {fileID: 1546411667}
   - 222: {fileID: 1546411669}
   - 114: {fileID: 1546411668}
+  - 114: {fileID: 1546411670}
   m_Layer: 5
   m_Name: PlayerReserveArmyPanel
   m_TagString: Untagged
@@ -12794,6 +12851,21 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1546411666}
+--- !u!114 &1546411670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1546411666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0700b7104d42a34469c7f0fb83b1ea26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 381878221}
+  bowData: {fileID: 756272266}
+  swordsData: {fileID: 586713542}
+  horseData: {fileID: 1940791721}
 --- !u!1 &1546691615
 GameObject:
   m_ObjectHideFlags: 0
@@ -13787,7 +13859,7 @@ GameObject:
   - 114: {fileID: 1657786198}
   - 114: {fileID: 1657786197}
   m_Layer: 5
-  m_Name: WoodUnitNumberInputField
+  m_Name: SwordsmanNumberInputField
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14016,7 +14088,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1664762514}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 128596045}
+        m_MethodName: SendArmy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1664762514
@@ -15472,6 +15555,9 @@ Transform:
   - {fileID: 1385264046}
   - {fileID: 793853188}
   - {fileID: 1001507346}
+  - {fileID: 2126184892}
+  - {fileID: 378996831}
+  - {fileID: 142060087}
   m_Father: {fileID: 1418551550}
   m_RootOrder: 0
 --- !u!1 &1805536614
@@ -18176,3 +18262,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0310febbf2825e744837ddcdfa95fe32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2126184891
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2126184892}
+  m_Layer: 0
+  m_Name: Lane1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2126184892
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2126184891}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1525, y: -450, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1805149196}
+  m_RootOrder: 4

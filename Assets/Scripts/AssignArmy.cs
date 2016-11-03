@@ -11,6 +11,10 @@ public class AssignArmy : MonoBehaviour {
     public UpdateNumberInputField swordsmanInput;
     public UpdateNumberInputField bowmanInput;
     public UpdateNumberInputField horsemanInput;
+    public Transform Lane1;
+    public Transform Lane2;
+    public Transform Lane3;
+    public Dropdown Chooser;
     // Use this for initialization
     void Start () {
         
@@ -34,13 +38,36 @@ public class AssignArmy : MonoBehaviour {
         swordsmanInput.setMax(player.reserveArmy.swordsmanCount);
         swordsmanSlider.maxValue = player.reserveArmy.swordsmanCount;
     }
-    void SendArmy()
+    public void SendArmy()
     {
-        Army currentArmy=Instantiate(army).GetComponent<Army>();
-        currentArmy.swordsmanCount = (int)swordsmanSlider.value;
-        currentArmy.horsemanCount = (int)horsemanSlider.value;
-        currentArmy.bowmanCount = (int)bowmanSlider.value;
+        MovingArmy currentArmy = Instantiate(army).GetComponent<MovingArmy>();
         currentArmy.player = player;
+        currentArmy.army = new Army(player);
+        Army currentRealArmy = currentArmy.army;
+        currentRealArmy.swordsmanCount = (int)swordsmanSlider.value;
+        currentRealArmy.horsemanCount = (int)horsemanSlider.value;
+        currentRealArmy.bowmanCount = (int)bowmanSlider.value;
+        switch (Chooser.value)
+        {
+            case 0:
+                {
+                    currentArmy.transform.position = Lane1.position;
+                    break;
+                }
+            case 1:
+                {
+                    currentArmy.transform.position = Lane2.position;
+                    break;
+                }
+            case 2:
+                {
+                    currentArmy.transform.position = Lane3.position;
+                    break;
+                }
+        }
+        player.reserveArmy.swordsmanCount -= currentRealArmy.swordsmanCount;
+        player.reserveArmy.bowmanCount -= currentRealArmy.bowmanCount;
+        player.reserveArmy.horsemanCount -= currentRealArmy.horsemanCount;
     }
 
 }
