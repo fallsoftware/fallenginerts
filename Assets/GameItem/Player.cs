@@ -97,7 +97,7 @@ public class Player : MonoBehaviour {
         if (population + number <= maxpopulation
             && wood > number * Bowman.woodcost
             && food > number * Bowman.foodcost
-            && food > number * Bowman.ironcost)
+            && iron > number * Bowman.ironcost)
         {
             return true;
         }
@@ -110,7 +110,7 @@ public class Player : MonoBehaviour {
         {
             wood -= number * Bowman.woodcost;
             food -= number * Bowman.foodcost;
-            food -= number * Bowman.ironcost;
+            iron -= number * Bowman.ironcost;
             reserveArmy.bowmanCount += number;
             population += number;
         }
@@ -120,7 +120,7 @@ public class Player : MonoBehaviour {
         if (population + number <= maxpopulation
             && wood > number * Horseman.woodcost
             && food > number * Horseman.foodcost
-            && food > number * Horseman.ironcost)
+            && iron > number * Horseman.ironcost)
         {
             return true;
         }
@@ -132,7 +132,7 @@ public class Player : MonoBehaviour {
         {
             wood -= number * Horseman.woodcost;
             food -= number * Horseman.foodcost;
-            food -= number * Horseman.ironcost;
+            iron -= number * Horseman.ironcost;
             reserveArmy.horsemanCount += number;
             population += number;
         }
@@ -142,7 +142,7 @@ public class Player : MonoBehaviour {
         if (population + number <= maxpopulation
             && wood > number * Swordsman.woodcost
             && food > number * Swordsman.foodcost
-            && food > number * Swordsman.ironcost)
+            && iron > number * Swordsman.ironcost)
         {
             return true;
         }
@@ -154,7 +154,7 @@ public class Player : MonoBehaviour {
         {
             wood -= number * Swordsman.woodcost;
             food -= number * Swordsman.foodcost;
-            food -= number * Swordsman.ironcost;
+            iron -= number * Swordsman.ironcost;
             reserveArmy.swordsmanCount += number;
             population += number;
         }

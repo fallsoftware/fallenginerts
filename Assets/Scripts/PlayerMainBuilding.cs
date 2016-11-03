@@ -30,6 +30,7 @@ public class PlayerMainBuilding : MonoBehaviour {
 
         if (!this.MinionBuildingPanel.activeSelf) {
             if (!this.MinionAssignPanel.activeSelf) {
+                this._mouseManager.ShutAllPanels();
                 this.MinionBuildingPanel.SetActive(true);
             }
         }

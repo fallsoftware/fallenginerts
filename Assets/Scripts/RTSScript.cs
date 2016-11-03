@@ -6,7 +6,7 @@ public class RTSScript : MonoBehaviour {
     public float ScrollSpeed = 500;
     public float DragSpeed = 20;
     public float MinZoom = 150;
-    public float MaxZoom = 30;
+    public float MaxZoom = 70;
     public float ZoomSensitivity = 10000000;
     public GameObject Battleground;
     private Bounds _maxSize;

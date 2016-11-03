@@ -17,13 +17,13 @@ public class MouseManager : MonoBehaviour {
     void OnMouseUp() {
         if (!this.MouseOnObject 
             && !EventSystem.current.IsPointerOverGameObject()) {
-            foreach (GameObject UIElement in this.UIElements) {
-                UIElement.SetActive(false);
-            }
+            this.ShutAllPanels();
         }
     }
 
-    void OnGUI() {
-        
+    public void ShutAllPanels() {
+        foreach (GameObject UIElement in this.UIElements) {
+            UIElement.SetActive(false);
+        }
     }
 }
