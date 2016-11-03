@@ -39,41 +39,35 @@ public class BuildUnit : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        int woodprice = 0;
-        int foodprice = 0;
-        int ironprice = 0;
-        int populationprice = 0;
-        int maxunit=0;
+       
         switch (selectedUnit)
         {
             case UnitType.SWORDSMAN:
                 {
-                    maxunit = player.maxBuyableSwordsman();
-                    woodprice =(int) Swordsman.PRICE.WOOD;
-                    foodprice = (int)Swordsman.PRICE.FOOD;
-                    ironprice = (int)Swordsman.PRICE.IRON;
-                    populationprice = (int)Swordsman.PRICE.POPULATION;
+                    printUnitCost(new Swordsman());
                     break;
                 }
             case UnitType.HORSEMAN:
                 {
-                    maxunit = player.maxBuyableHorseman();
-                    woodprice = (int)Horseman.PRICE.WOOD;
-                    foodprice = (int)Horseman.PRICE.FOOD;
-                    ironprice = (int)Horseman.PRICE.IRON;
-                    populationprice = (int)Horseman.PRICE.POPULATION;
+                    printUnitCost(new Horseman());
                     break;
                 }
             case UnitType.BOWMAN:
                 {
-                    maxunit = player.maxBuyableBowman();
-                    woodprice = (int)Bowman.PRICE.WOOD;
-                    foodprice = (int)Bowman.PRICE.FOOD;
-                    ironprice = (int)Bowman.PRICE.IRON;
-                    populationprice = (int)Bowman.PRICE.POPULATION;
+                    printUnitCost(new Bowman());
                     break;
                 }
         }
+        
+    }
+    private void printUnitCost(Unit unit)
+    {
+        int woodprice = unit.GetWoodCost();
+        int foodprice = unit.GetFoodCost();
+        int ironprice = unit.GetIronCost();
+        int populationprice = unit.GetPopulationCost();
+        int maxunit = 0;
+        maxunit = player.maxBuyableUnit(unit);
         connectedSlider.maxValue = maxunit;
         inputfield.setMax(maxunit);
         int number = (int)connectedSlider.value;
@@ -88,17 +82,17 @@ public class BuildUnit : MonoBehaviour
         {
             case UnitType.SWORDSMAN:
                 {
-                    player.BuySwordsman((int)connectedSlider.value);
+                    player.BuyUnit((int)connectedSlider.value,new Swordsman());
                     break;
                 }
             case UnitType.HORSEMAN:
                 {
-                    player.BuyHorseman((int)connectedSlider.value);
+                    player.BuyUnit((int)connectedSlider.value, new Horseman());
                     break;
                 }
             case UnitType.BOWMAN:
                 {
-                    player.BuyBowman((int)connectedSlider.value);
+                    player.BuyUnit((int)connectedSlider.value, new Bowman());
                     break;
                 }
         }

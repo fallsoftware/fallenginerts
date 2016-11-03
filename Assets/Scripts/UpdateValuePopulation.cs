@@ -11,6 +11,6 @@ public class UpdateValuePopulation : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        this.gameObject.GetComponent<Text>().text = player.population + "/" + player.maxpopulation;
+        this.gameObject.GetComponent<Text>().text = player.population + "/" + Player.maxpopulation;
 	}
 }

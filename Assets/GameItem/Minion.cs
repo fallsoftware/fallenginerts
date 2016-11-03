@@ -4,10 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-class Minion
+class Minion : Unit
 {
-    public enum PRICE { WOOD = 20, IRON = 20, FOOD = 20, POPULATION = 1 };
-    private const int lifetime=60;
+    public static int lifetime=60;
     public int time;
     public static int woodcost = 20;
     public static int ironcost = 20;
@@ -38,5 +37,46 @@ class Minion
             return 0;
         }
         return (time/lifetime*100);
+    }
+
+    public override void SetIronCost(int newPrice)
+    {
+        ironcost = newPrice;
+    }
+
+    public override void SetWoodCost(int newPrice)
+    {
+        woodcost = newPrice;
+    }
+
+    public override void SetFoodCost(int newPrice)
+    {
+        foodcost = newPrice;
+    }
+
+    public override int GetIronCost()
+    {
+        return ironcost;
+    }
+
+    public override int GetFoodCost()
+    {
+        return foodcost;
+    }
+
+    public override int GetWoodCost()
+    {
+        return woodcost;
+    }
+
+
+    public override void SetPopulationCost(int i)
+    {
+        populationcost = i;
+    }
+
+    public override int GetPopulationCost()
+    {
+        return populationcost;
     }
 }

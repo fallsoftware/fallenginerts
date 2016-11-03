@@ -36,13 +36,13 @@ public class BuildMinion : MonoBehaviour {
     }
     // Update is called once per frame
     void Update () {
-        connectedSlider.maxValue = player.maxBuyableMinion();
-        inputfield.setMax(player.maxBuyableMinion());
+        connectedSlider.maxValue = player.maxBuyableUnit(new Minion());
+        inputfield.setMax((int)connectedSlider.maxValue);
         int number = (int)connectedSlider.value;
-        connectedCostPanel.UpdateCost(number * (int)Minion.PRICE.FOOD,
-            number * (int)Minion.PRICE.IRON,
-            number * (int)Minion.PRICE.WOOD,
-            number * (int)Minion.PRICE.POPULATION);
+        connectedCostPanel.UpdateCost(number * (int)Minion.foodcost,
+            number * (int)Minion.ironcost,
+            number * (int)Minion.woodcost,
+            number * (int)Minion.populationcost);
     }
     public void BuyMinion()
     {

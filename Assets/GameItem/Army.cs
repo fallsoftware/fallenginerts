@@ -69,4 +69,20 @@ public class Army
     {
 
     }
+
+    internal void AddUnit(int number, Unit unit)
+    {
+        if(unit is Bowman)
+        {
+            bowmanCount += number;
+        }
+        else if (unit is Horseman)
+        {
+            horsemanCount += number;
+        }
+        else if (unit is Swordsman)
+        {
+            swordsmanCount += number;
+        }
+    }
 }
