@@ -2068,7 +2068,6 @@ MonoBehaviour:
   iron: 0
   food: 0
   population: 0
-  maxpopulation: 200
   minionCount: {fileID: 0}
 --- !u!1 &388927614
 GameObject:
@@ -3692,6 +3691,67 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 751271557}
+--- !u!1 &792492830
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 792492832}
+  - 114: {fileID: 792492831}
+  m_Layer: 0
+  m_Name: Config
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &792492831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 792492830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57b956b9370ed404da5c8253e34372f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minionCostWood: 20
+  minionCostIron: 20
+  minionCostFood: 20
+  minionCostPopulation: 1
+  minionLifeTime: 100
+  swordsmanCostWood: 20
+  swordsmanCostIron: 20
+  swordsmanCostFood: 20
+  swordsmanCostPopulation: 1
+  horsemanCostWood: 20
+  horsemanCostIron: 20
+  horsemanCostFood: 20
+  horsemanCostPopulation: 1
+  bowmanCostWood: 20
+  bowmanCostIron: 20
+  bowmanCostFood: 20
+  bowmanCostPopulation: 1
+  PlayermaxPopulation: 200
+  PlayerRegen: 15
+  UnitBuildingLife: 100
+  UnitBuildingRespawnTime: 0
+--- !u!4 &792492832
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 792492830}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 325.10156, y: 75.52864, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
 --- !u!1 &793853187
 GameObject:
   m_ObjectHideFlags: 0
@@ -7107,6 +7167,7 @@ GameObject:
   - 212: {fileID: 1385264049}
   - 61: {fileID: 1385264048}
   - 114: {fileID: 1385264047}
+  - 114: {fileID: 1385264050}
   m_Layer: 0
   m_Name: PlayerUnitBuilding1
   m_TagString: Untagged
@@ -7187,6 +7248,19 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &1385264050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1385264045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ded0c880c05debb4f87559d899594745, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life: 0
+  cooldownBeforeRespawn: 0
 --- !u!1 &1411703999
 GameObject:
   m_ObjectHideFlags: 0
