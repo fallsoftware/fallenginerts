@@ -1794,8 +1794,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 318730938}
   - 212: {fileID: 318730939}
-  - 61: {fileID: 318730940}
   - 114: {fileID: 318730941}
+  - 114: {fileID: 318730942}
   m_Layer: 0
   m_Name: PlayerArmy
   m_TagString: Untagged
@@ -1853,20 +1853,6 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
---- !u!61 &318730940
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 318730937}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Size: {x: 8, y: 6}
 --- !u!114 &318730941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1879,6 +1865,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Info: {fileID: 1893364263}
+--- !u!114 &318730942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 318730937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af7a93ab9d305dd49857bedd4b049047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &325654607
 GameObject:
   m_ObjectHideFlags: 0
@@ -9277,6 +9274,7 @@ GameObject:
   - 212: {fileID: 1499103252}
   - 114: {fileID: 1499103253}
   - 114: {fileID: 1499103254}
+  - 114: {fileID: 1499103255}
   m_Layer: 0
   m_Name: PlayerMainBuilding
   m_TagString: Untagged
@@ -9361,6 +9359,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Info: {fileID: 598309771}
+--- !u!114 &1499103255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1499103250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af7a93ab9d305dd49857bedd4b049047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1502094055
 GameObject:
   m_ObjectHideFlags: 0
@@ -11219,7 +11228,7 @@ MonoBehaviour:
   ScrollSpeed: 500
   DragSpeed: 20
   MinZoom: 150
-  MaxZoom: 30
+  MaxZoom: 80
   ZoomSensitivity: 100
   Battleground: {fileID: 1417852361}
 --- !u!81 &1709587264
