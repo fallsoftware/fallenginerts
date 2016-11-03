@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class UnitBuilding : MonoBehaviour {
+public class UnitBuildingLife : MonoBehaviour {
     public static int maxlife =100;
     public static int RespawnCooldown = 200;
 
