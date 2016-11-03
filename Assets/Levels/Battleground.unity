@@ -327,7 +327,7 @@ RectTransform:
   m_RootOrder: 3
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 482, y: -1}
+  m_AnchoredPosition: {x: 926, y: -1}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &42308540
@@ -3656,7 +3656,7 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 324, y: -1}
+  m_AnchoredPosition: {x: 629, y: -1}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &751271559
@@ -3766,12 +3766,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72482d98e4a378445b0c3cf1081fa73a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UnitBuildingPanel: {fileID: 1562310664}
   Battleground: {fileID: 1417852361}
   SelectedColor: {r: 0, g: 1, b: 0.6666667, a: 1}
   DefaultColor: {r: 0, g: 0, b: 0, a: 0}
   MouseManager: {fileID: 0}
   SpriteRenderer: {fileID: 0}
+  UnitBuildingPanel: {fileID: 1562310664}
 --- !u!1 &794492278
 GameObject:
   m_ObjectHideFlags: 0
@@ -4360,12 +4360,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72482d98e4a378445b0c3cf1081fa73a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UnitBuildingPanel: {fileID: 1562310664}
   Battleground: {fileID: 1417852361}
   SelectedColor: {r: 0, g: 1, b: 0.6666667, a: 1}
   DefaultColor: {r: 0, g: 0, b: 0, a: 0}
   MouseManager: {fileID: 0}
   SpriteRenderer: {fileID: 0}
+  UnitBuildingPanel: {fileID: 1562310664}
 --- !u!212 &1001507349
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7115,12 +7115,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72482d98e4a378445b0c3cf1081fa73a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UnitBuildingPanel: {fileID: 1562310664}
   Battleground: {fileID: 1417852361}
   SelectedColor: {r: 0, g: 1, b: 0.6666667, a: 1}
   DefaultColor: {r: 0, g: 0, b: 0, a: 0}
   MouseManager: {fileID: 0}
   SpriteRenderer: {fileID: 0}
+  UnitBuildingPanel: {fileID: 1562310664}
 --- !u!212 &1385264049
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7775,7 +7775,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c8738dda7f99ca418b560384e33fe0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UnitBuildingPanel: {fileID: 1562310664}
   Battleground: {fileID: 1417852361}
   SelectedColor: {r: 0, g: 1, b: 0.6666667, a: 1}
   DefaultColor: {r: 0, g: 0, b: 0, a: 0}
@@ -9302,7 +9301,7 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 174, y: -1}
+  m_AnchoredPosition: {x: 328, y: -1}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1712527216
