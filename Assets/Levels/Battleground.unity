@@ -177,7 +177,7 @@ GameObject:
   - 114: {fileID: 6823558}
   - 114: {fileID: 6823557}
   m_Layer: 5
-  m_Name: GameOVer
+  m_Name: GameOver
   m_TagString: GameOver
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12800,6 +12800,8 @@ GameObject:
   - 114: {fileID: 1499103253}
   - 114: {fileID: 1499103254}
   - 114: {fileID: 1499103255}
+  - 61: {fileID: 1499103256}
+  - 114: {fileID: 1499103257}
   m_Layer: 0
   m_Name: PlayerMainBuilding
   m_TagString: Untagged
@@ -12891,11 +12893,41 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1499103250}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: af7a93ab9d305dd49857bedd4b049047, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!61 &1499103256
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1499103250}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 6, y: 30}
+--- !u!114 &1499103257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1499103250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 589ee042a6f02624e88c8669977390d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 381878221}
+  GameOverPanel: {fileID: 6823555}
+  GameOverLogoObject: {fileID: 146867347}
+  GameOverDefeat: {fileID: 21300000, guid: 2da5b7058dbfff94aa4de7d91e12bfd8, type: 3}
+  GameOverVictory: {fileID: 21300000, guid: cbdded52b175bbb44813931c4dd2027e, type: 3}
 --- !u!1 &1502094055
 GameObject:
   m_ObjectHideFlags: 0
@@ -15830,6 +15862,8 @@ GameObject:
   - 4: {fileID: 1752838105}
   - 212: {fileID: 1752838108}
   - 61: {fileID: 1752838106}
+  - 61: {fileID: 1752838107}
+  - 114: {fileID: 1752838109}
   m_Layer: 0
   m_Name: AIMainBuilding
   m_TagString: Untagged
@@ -15857,7 +15891,7 @@ BoxCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1752838104}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -15865,6 +15899,20 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 6, y: 6}
+--- !u!61 &1752838107
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1752838104}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 6, y: 30}
 --- !u!212 &1752838108
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15898,6 +15946,22 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &1752838109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1752838104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 589ee042a6f02624e88c8669977390d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1935326094}
+  GameOverPanel: {fileID: 6823555}
+  GameOverLogoObject: {fileID: 146867347}
+  GameOverDefeat: {fileID: 21300000, guid: 2da5b7058dbfff94aa4de7d91e12bfd8, type: 3}
+  GameOverVictory: {fileID: 21300000, guid: cbdded52b175bbb44813931c4dd2027e, type: 3}
 --- !u!1 &1755592640
 GameObject:
   m_ObjectHideFlags: 0

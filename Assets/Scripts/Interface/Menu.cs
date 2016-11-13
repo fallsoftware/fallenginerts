@@ -18,6 +18,7 @@ public class Menu : MonoBehaviour {
 
     public void HandleMenu() {
         if (this.MouseManager != null && this.ShutPanels) {
+            this.MouseManager.ResetSpriteRenderers();
             this.MouseManager.ShutAllPanels();
         }
 

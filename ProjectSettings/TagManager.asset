@@ -9,7 +9,6 @@ TagManager:
   - Level
   - GameOver
   - AI
-  - Player
   - GameOverLogo
   layers:
   - Default
@@ -21,7 +20,7 @@ TagManager:
   - 
   - 
   - Background
-  - 
+  - Player
   - Outline
   - 
   - 
