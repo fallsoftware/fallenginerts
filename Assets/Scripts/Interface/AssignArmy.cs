@@ -47,7 +47,7 @@ public class AssignArmy : MonoBehaviour {
             currentArmy.player = player;
             currentArmy.army = new Army(player);
             Army currentRealArmy = currentArmy.army;
-            currentRealArmy.swordsmanCount = ;
+            currentRealArmy.swordsmanCount = (int)swordsmanSlider.value;
             currentRealArmy.horsemanCount = (int)horsemanSlider.value;
             currentRealArmy.bowmanCount = (int)bowmanSlider.value;
 
