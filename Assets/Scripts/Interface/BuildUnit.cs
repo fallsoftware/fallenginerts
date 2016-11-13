@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
-
+/// <summary>
+/// Script for the building of units by the interface
+/// </summary>
 public class BuildUnit : MonoBehaviour
 {
 
@@ -14,7 +16,9 @@ public class BuildUnit : MonoBehaviour
     public Sprite horseSprite;
     public CostPanel connectedCostPanel;
     public UpdateNumberInputField inputfield;
-    // Use this for initialization
+    /// <summary>
+    /// Set the selected unit to sword at start
+    /// </summary>
     void Start()
     {
         SetUnitToSwordsman();
@@ -36,7 +40,9 @@ public class BuildUnit : MonoBehaviour
         this.selectedUnit = UnitType.BOWMAN;
         connectedImage.sprite = bowSprite;
     }
-    // Update is called once per frame
+    /// <summary>
+    /// At update, update the cost of the units selected
+    /// </summary>
     void Update()
     {
        
@@ -60,6 +66,10 @@ public class BuildUnit : MonoBehaviour
         }
         
     }
+    /// <summary>
+    /// Calculation and printing of the price of the units selected
+    /// </summary>
+    /// <param name="unit"></param>
     private void printUnitCost(Unit unit)
     {
         int woodprice = unit.GetWoodCost();
@@ -76,6 +86,9 @@ public class BuildUnit : MonoBehaviour
             number * woodprice,
             number * populationprice);
     }
+    /// <summary>
+    /// On push on the button we buy what is selected
+    /// </summary>
     public void BuyUnit()
     {
         switch (selectedUnit)

@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-
+/// <summary>
+/// Script of gestion on the menu
+/// </summary>
 public class Menu : MonoBehaviour {
     public GameObject BattleGround;
     [HideInInspector] public MouseManager MouseManager;

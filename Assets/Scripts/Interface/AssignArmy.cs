@@ -41,14 +41,16 @@ public class AssignArmy : MonoBehaviour {
     }
     public void SendArmy()
     {
-        MovingArmy currentArmy = Instantiate(army).GetComponent<MovingArmy>();
-        currentArmy.player = player;
-        currentArmy.army = new Army(player);
-        Army currentRealArmy = currentArmy.army;
-        currentRealArmy.swordsmanCount = (int)swordsmanSlider.value;
-        currentRealArmy.horsemanCount = (int)horsemanSlider.value;
-        currentRealArmy.bowmanCount = (int)bowmanSlider.value;
-        if (currentRealArmy.TotalUnit > 0){
+        if ((int)swordsmanSlider.value > 0 || (int)horsemanSlider.value>0|| (int)bowmanSlider.value>0)
+        {
+            MovingArmy currentArmy = Instantiate(army).GetComponent<MovingArmy>();
+            currentArmy.player = player;
+            currentArmy.army = new Army(player);
+            Army currentRealArmy = currentArmy.army;
+            currentRealArmy.swordsmanCount = ;
+            currentRealArmy.horsemanCount = (int)horsemanSlider.value;
+            currentRealArmy.bowmanCount = (int)bowmanSlider.value;
+
             switch (Chooser.value)
             {
                 case 0:
@@ -67,11 +69,11 @@ public class AssignArmy : MonoBehaviour {
                         break;
                     }
             }
+            player.reserveArmy.swordsmanCount -= currentRealArmy.swordsmanCount;
+            player.reserveArmy.bowmanCount -= currentRealArmy.bowmanCount;
+            player.reserveArmy.horsemanCount -= currentRealArmy.horsemanCount;
+            SoundManager.instance.RandomizeSfx(this.LaunchArmySound);
         }
-        player.reserveArmy.swordsmanCount -= currentRealArmy.swordsmanCount;
-        player.reserveArmy.bowmanCount -= currentRealArmy.bowmanCount;
-        player.reserveArmy.horsemanCount -= currentRealArmy.horsemanCount;
-        SoundManager.instance.RandomizeSfx(this.LaunchArmySound);
     }
 
 }

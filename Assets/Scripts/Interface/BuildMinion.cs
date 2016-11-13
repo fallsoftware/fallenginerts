@@ -38,7 +38,9 @@ public class BuildMinion : MonoBehaviour {
         this.selectedRessource = RessourceType.WOOD;
         connectedImage.sprite = woodSprite;
     }
-    // Update is called once per frame
+    /// <summary>
+    /// At each update, updating of the interface with the maximum buyable minions
+    /// </summary>
     void Update () {
         connectedSlider.maxValue = player.maxBuyableUnit(new Minion());
         inputfield.setMax((int)connectedSlider.maxValue);
@@ -48,6 +50,9 @@ public class BuildMinion : MonoBehaviour {
             number * (int)Minion.woodcost,
             number * (int)Minion.populationcost);
     }
+    /// <summary>
+    /// at the push of the button we buy minions that are put in correspondant list of the player
+    /// </summary>
     public void BuyMinion()
     {
         switch(selectedRessource){
