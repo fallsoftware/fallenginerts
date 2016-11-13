@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-
+/// <summary>
+/// Generic class of Unit for the inheritence
+/// </summary>
 public abstract class Unit
 {
     public abstract void SetIronCost(int i);

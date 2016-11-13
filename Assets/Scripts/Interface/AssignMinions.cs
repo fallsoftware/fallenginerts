@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
-
+/// <summary>
+/// Script of the assignation of minions by the interface
+/// </summary>
 public class AssignMinions : MonoBehaviour {
     public Player player;
     public Slider woodSlider;
@@ -10,10 +12,9 @@ public class AssignMinions : MonoBehaviour {
     public UpdateNumberInputField woodInput;
     public UpdateNumberInputField ironInput;
     public UpdateNumberInputField foodInput;
-    // Use this for initialization
-    void Start () {
-        
-    }
+    /// <summary>
+    /// On enable and on update, updatings of the values in the interface
+    /// </summary>
 	void OnEnable()
     {
         setMaxValue();
@@ -21,10 +22,15 @@ public class AssignMinions : MonoBehaviour {
         foodSlider.value = player.getNumberFood();
         ironSlider.value = player.getNumberIron();
     }
-    // Update is called once per frame
+    /// <summary>
+    /// On enable and on update, updatings of the values in the interface
+    /// </summary>
     void Update () {
         setMaxValue();
     }
+    /// <summary>
+    /// Setting of the maxvalues in the interface
+    /// </summary>
     void setMaxValue()
     {
         int idleminion = player.getNumberIdle();

@@ -3,7 +3,9 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+/// <summary>
+/// Horseman Unit
+/// </summary>
 class Horseman : Unit {
 
     public static int woodcost = 10;

@@ -4,7 +4,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 
-public enum RessourceType { WOOD, IRON, FOOD };
 
 public class Player : MonoBehaviour {
 
@@ -21,13 +20,17 @@ public class Player : MonoBehaviour {
     public List<Minion> minionFood = new List<Minion>();
     public Army reserveArmy;
 
-    // Use this for initialization
+    /// <summary>
+    /// Start of the update of the player each seconds
+    /// </summary>
     void Start () {
         reserveArmy = new global::Army(this);
         InvokeRepeating("UpdatePlayer", 0, 1.0f);
 
     }
-
+    /// <summary>
+    /// Update of the ressource of the player and of the minions
+    /// </summary>
     private void UpdatePlayer()
     {
         wood += (minionWood.Count) * collectbyminion+baseregen;
@@ -40,6 +43,10 @@ public class Player : MonoBehaviour {
         
 
     }
+    /// <summary>
+    /// Check of the deaths in a list of minions as they have a limited lifespan
+    /// </summary>
+    /// <param name="minions"></param>
     private void CheckDeath(List<Minion> minions)
     {
         List<Minion> todie = new List<Minion>();
@@ -69,6 +76,11 @@ public class Player : MonoBehaviour {
     {
         BuyMinion(number, minionFood);
     }
+    /// <summary>
+    /// the player will buy minions
+    /// </summary>
+    /// <param name="number">number of minions to buy</param>
+    /// <param name="minions">List of minions in which to add the minions</param>
     private void BuyMinion(int number, List<Minion> minions)
     {
         if (CanBuyUnit(number,new Minion()))
@@ -83,25 +95,37 @@ public class Player : MonoBehaviour {
             population += number;
         }
     }
-
+    /// <summary>
+    /// The player will buy units
+    /// </summary>
+    /// <param name="number">number of units to buy</param>
+    /// <param name="unit">type of units to buy</param>
     public void BuyUnit(int number,Unit unit)
     {
-        if (CanBuyUnit(number,unit))
-        {
-            wood -= number * unit.GetWoodCost();
-            food -= number * unit.GetFoodCost();
-            iron -= number * unit.GetIronCost();
-            population += number*unit.GetPopulationCost();
-            reserveArmy.AddUnit(number, unit);
-            
+        if(!(unit is Minion)) {
+            if (CanBuyUnit(number, unit))
+            {
+                wood -= number * unit.GetWoodCost();
+                food -= number * unit.GetFoodCost();
+                iron -= number * unit.GetIronCost();
+                population += number * unit.GetPopulationCost();
+                reserveArmy.AddUnit(number, unit);
+            }
         }
     }
+    /// <summary>
+    /// Verification if you can buy units
+    /// </summary>
+    /// <param name="number">number of unit to verify</param>
+    /// <param name="unit">type of unit to verify</param>
+    /// <returns></returns>
     public bool CanBuyUnit(int number,Unit unit)
     {
         if (population + number <= maxpopulation
             && wood > number * unit.GetWoodCost()
             && food > number * unit.GetFoodCost()
-            && iron > number * unit.GetIronCost())
+            && iron > number * unit.GetIronCost()
+            && number >0 )
         {
             return true;
         }
@@ -136,6 +160,11 @@ public class Player : MonoBehaviour {
     {
         setMinionList(minionIron, number);
     }
+    /// <summary>
+    /// Setting of a list of minion to the number needed by picking in the idle pool or by putting it in it
+    /// </summary>
+    /// <param name="list">List to work with</param>
+    /// <param name="number">number to reach in the list</param>
     void setMinionList(List<Minion> list,int number)
     {
         int difference = number - list.Count;
@@ -158,13 +187,13 @@ public class Player : MonoBehaviour {
             }
         }
     }
-
+    /// <summary>
+    /// Calculation of the max buyable units of a type
+    /// </summary>
+    /// <param name="unit">type of the unit to buy</param>
+    /// <returns></returns>
     public int maxBuyableUnit(Unit unit)
     {
         return (int)Math.Floor((double)Math.Min(Math.Min(food / unit.GetFoodCost(), Math.Min(wood / unit.GetWoodCost(), iron / unit.GetIronCost())), maxpopulation - population));
     }
-    // Update is called once per frame
-    void Update () {
-	    
-	}
 }

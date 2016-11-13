@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+//Script of the UnitBuilding for the interface (color)
 public class UnitBuilding : MonoBehaviour {
     public GameObject Battleground;
     public Color SelectedColor;

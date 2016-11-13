@@ -24,7 +24,7 @@ public class IA : MonoBehaviour {
         switch(state){
             case State.WOOD:
                 {
-                    player.BuyMinionWood(player.maxBuyableUnit(new Minion()));
+                    player.BuyMinionWood(Math.Max(20,player.maxBuyableUnit(new Minion())));
                     if (player.minionFood.Count < 20)
                     {
                         state = State.FOOD;
@@ -41,7 +41,7 @@ public class IA : MonoBehaviour {
                 }
             case State.FOOD:
                 {
-                    player.BuyMinionFood(player.maxBuyableUnit(new Minion()));
+                    player.BuyMinionFood(Math.Max(20, player.maxBuyableUnit(new Minion())));
                     if (player.minionIron.Count < 20)
                     {
                         state = State.IRON;
@@ -54,7 +54,7 @@ public class IA : MonoBehaviour {
                 }
             case State.IRON:
                 {
-                    player.BuyMinionIron(player.maxBuyableUnit(new Minion()));
+                    player.BuyMinionIron(Math.Max(20, player.maxBuyableUnit(new Minion())));
                     state = State.SWORD;
 
                     break;

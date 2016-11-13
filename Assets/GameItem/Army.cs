@@ -2,7 +2,13 @@
 using UnityEngine.UI;
 using System.Collections;
 using System;
+/// <summary>
+/// Enumeration for the types of units in the army
+/// </summary>
 public enum UnitType {SWORDSMAN,BOWMAN,HORSEMAN };
+/// <summary>
+/// An Army (groups of units), an army is owned by a player
+/// </summary>
 public class Army
 {
     public int bowmanCount=0;
@@ -10,14 +16,25 @@ public class Army
     public int horsemanCount=0;
     public int TotalUnit { get { return swordsmanCount + horsemanCount + bowmanCount; }}
     public Player player;
+    /// <summary>
+    /// Constructor of a army with the player owning the army
+    /// </summary>
+    /// <param name="_player">player owning the army</param>
     public Army(Player _player)
     {
         this.player = _player;
     }
+    /// <summary>
+    /// Confrontation of this army with another one owned by another player only one army can have remaining units at the end
+    /// </summary>
+    /// <param name="otherArmy"></param>
     public void ConfrontArmy(Army otherArmy)
     {
+        //Verification of the player owning the other army
         if (otherArmy.player != player)
         {
+            //Calcul of the winner: first destruction of units by the rock paper scissors (a swordsman will destroy freely a bowman)
+            //then will be removed number of units lefts in the other army
             int temptotalbegin1 = this.TotalUnit;
             int temptotalbegin2 = otherArmy.TotalUnit;
             int tempbowman = bowmanCount;
@@ -35,8 +52,12 @@ public class Army
             RemoveUnits(ToRemove);
             otherArmy.RemoveUnits(ToRemove);
         }
-
+        
     }
+    /// <summary>
+    /// Removing of a certain number of units in the army in this order: swordsman,horseman,bowman
+    /// </summary>
+    /// <param name="ToRemoveUnit">number of units to destroy</param>
     public void RemoveUnits(int ToRemoveUnit)
     {
         int temp = Math.Min(ToRemoveUnit,TotalUnit);
@@ -61,6 +82,12 @@ public class Army
         }
 
     }
+
+    /// <summary>
+    /// Add certain number of units of a certain type in the army
+    /// </summary>
+    /// <param name="number"></param>
+    /// <param name="unit"></param>
     internal void AddUnit(int number, Unit unit)
     {
         if(unit is Bowman)

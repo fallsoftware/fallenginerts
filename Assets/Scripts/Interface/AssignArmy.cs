@@ -47,23 +47,25 @@ public class AssignArmy : MonoBehaviour {
         currentRealArmy.swordsmanCount = (int)swordsmanSlider.value;
         currentRealArmy.horsemanCount = (int)horsemanSlider.value;
         currentRealArmy.bowmanCount = (int)bowmanSlider.value;
-        switch (Chooser.value)
-        {
-            case 0:
-                {
-                    currentArmy.transform.position = Lane1.position;
-                    break;
-                }
-            case 1:
-                {
-                    currentArmy.transform.position = Lane2.position;
-                    break;
-                }
-            case 2:
-                {
-                    currentArmy.transform.position = Lane3.position;
-                    break;
-                }
+        if (currentRealArmy.TotalUnit > 0){
+            switch (Chooser.value)
+            {
+                case 0:
+                    {
+                        currentArmy.transform.position = Lane1.position;
+                        break;
+                    }
+                case 1:
+                    {
+                        currentArmy.transform.position = Lane2.position;
+                        break;
+                    }
+                case 2:
+                    {
+                        currentArmy.transform.position = Lane3.position;
+                        break;
+                    }
+            }
         }
         player.reserveArmy.swordsmanCount -= currentRealArmy.swordsmanCount;
         player.reserveArmy.bowmanCount -= currentRealArmy.bowmanCount;

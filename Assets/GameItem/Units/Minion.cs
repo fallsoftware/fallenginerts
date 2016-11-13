@@ -3,7 +3,9 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+/// <summary>
+/// Minion Unit
+/// </summary>
 public class Minion : Unit
 {
     public static int lifetime=60;

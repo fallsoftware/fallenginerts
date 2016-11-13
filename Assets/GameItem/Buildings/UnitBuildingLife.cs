@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
-
+/// <summary>
+/// Script Operating the life of the Production Building
+/// </summary>
 public class UnitBuildingLife : MonoBehaviour {
     public static int maxlife =100;
     public static int RespawnCooldown = 200;
@@ -9,13 +11,12 @@ public class UnitBuildingLife : MonoBehaviour {
     public Sprite spriteDestroy;
     public int life=maxlife;
     public int cooldownBeforeRespawn = RespawnCooldown;
-	// Use this for initialization
+	//Initialization of the life at the value set in the config
 	void Start () {
         life = maxlife;
         cooldownBeforeRespawn = RespawnCooldown;
 	}
-	
-	// Update is called once per frame
+	///checking for the Respawn if needed in the update
 	void Update () {
         if (cooldownBeforeRespawn < RespawnCooldown)
         {
@@ -26,14 +27,13 @@ public class UnitBuildingLife : MonoBehaviour {
                 this.gameObject.AddComponent<BoxCollider2D>();
                 this.gameObject.GetComponent<BoxCollider2D>().isTrigger=true;
                 (gameObject.GetComponent<SpriteRenderer>()).sprite = spriteAlive;
-
-
-                /*
-                 *Remettre La boxCollider et rechanger le sprite 
-                 */
             }
         }
 	}
+    /// <summary>
+    /// deals damage to the building
+    /// </summary>
+    /// <param name="damage">number of the damage dealt</param>
     public void HurtBuilding(int damage)
     {
         life -= damage;

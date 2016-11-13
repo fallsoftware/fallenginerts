@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
-
+/// <summary>
+/// Script of creation of minions by the interface
+/// </summary>
 public class BuildMinion : MonoBehaviour {
 
     private RessourceType selectedRessource;
@@ -13,7 +15,9 @@ public class BuildMinion : MonoBehaviour {
     public Sprite foodSprite;
     public CostPanel connectedCostPanel;
     public UpdateNumberInputField inputfield;
-	// Use this for initialization
+	/// <summary>
+    /// At start, set the selected ressource to wood
+    /// </summary>
 	void Start () {
         SetRessourceToWood();
     }
