@@ -71,6 +71,10 @@ class MovingArmy : MonoBehaviour
                 if (mainBuilding != null)
                 {
                     this.army.ConfrontArmy(mainBuilding.player.reserveArmy);
+
+                    if (mainBuilding.player.reserveArmy.TotalUnit <= 0) {
+                        this.GameOver(mainBuilding.player.tag);
+                    }
                 }
             }
         }
@@ -82,5 +86,40 @@ class MovingArmy : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+    }
+
+    private void GameOver(string playerTag) {
+        GameObject gameOverObject
+           = GameObject.FindGameObjectWithTag("GameOver");
+
+        if (gameOverObject == null) return;
+
+        gameOverObject.SetActive(true);
+        Time.timeScale = 0f;
+
+        GameObject gameOverLogoObject 
+            = GameObject.FindGameObjectWithTag("GameOverLogo");
+
+        if (gameOverLogoObject == null) return;
+
+        Image gameOverLogo = gameOverLogoObject.GetComponent<Image>();
+
+        if (gameOverLogo == null) return;
+
+        string gameOverLogoPath = this.getGameOverLogoPath(playerTag);
+
+        UnityEngine.Object image = Resources.Load(gameOverLogoPath);
+
+        if (!(image is Sprite)) return;
+
+        gameOverLogo.sprite = (Sprite) image;
+    }
+
+    private string getGameOverLogoPath(string playerTag) {
+        if (playerTag == "Player") {
+            return "Sprites/gameOverDefeat";
+        }
+
+        return "Sprites/gameOverVictory";
     }
 }

@@ -178,11 +178,11 @@ GameObject:
   - 114: {fileID: 6823557}
   m_Layer: 5
   m_Name: GameOVer
-  m_TagString: Untagged
+  m_TagString: GameOver
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6823556
 RectTransform:
   m_ObjectHideFlags: 0
@@ -216,6 +216,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e8f613d3f2b0934a896a2711d6bc007, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BattleGround: {fileID: 0}
+  MouseManager: {fileID: 0}
+  ShutPanels: 0
 --- !u!114 &6823558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1117,6 +1120,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e8f613d3f2b0934a896a2711d6bc007, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BattleGround: {fileID: 1417852361}
+  MouseManager: {fileID: 0}
+  ShutPanels: 1
 --- !u!114 &128596043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1374,7 +1380,7 @@ GameObject:
   - 114: {fileID: 146867349}
   m_Layer: 5
   m_Name: GameOverLogo
-  m_TagString: Untagged
+  m_TagString: GameOverLogo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3079,7 +3085,7 @@ GameObject:
   - 114: {fileID: 381878221}
   m_Layer: 0
   m_Name: Player1
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7194,6 +7200,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e8f613d3f2b0934a896a2711d6bc007, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BattleGround: {fileID: 0}
+  MouseManager: {fileID: 0}
+  ShutPanels: 0
 --- !u!114 &997853541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8241,6 +8250,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e8f613d3f2b0934a896a2711d6bc007, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BattleGround: {fileID: 0}
+  MouseManager: {fileID: 0}
+  ShutPanels: 0
 --- !u!114 &1043471483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13833,6 +13845,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e8f613d3f2b0934a896a2711d6bc007, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BattleGround: {fileID: 0}
+  MouseManager: {fileID: 0}
+  ShutPanels: 0
 --- !u!114 &1562310669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15075,6 +15090,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e8f613d3f2b0934a896a2711d6bc007, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BattleGround: {fileID: 0}
+  MouseManager: {fileID: 0}
+  ShutPanels: 0
 --- !u!223 &1685203407
 Canvas:
   m_ObjectHideFlags: 0
@@ -17350,7 +17368,7 @@ MonoBehaviour:
   bowmanCostPopulation: 1
   PlayermaxPopulation: 200
   PlayerRegen: 10
-  UnitBuildingLife: 100
+  UnitBuildingLife: 0
   UnitBuildingRespawnTime: 200
 --- !u!4 &1887977111
 Transform:
@@ -17780,7 +17798,7 @@ GameObject:
   - 114: {fileID: 1935326093}
   m_Layer: 0
   m_Name: Player2
-  m_TagString: Untagged
+  m_TagString: AI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
