@@ -7,6 +7,9 @@ TagManager:
   - Ground
   - Processed
   - Level
+  - GameOver
+  - AI
+  - GameOverLogo
   layers:
   - Default
   - TransparentFX

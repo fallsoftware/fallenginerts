@@ -3,10 +3,6 @@ using UnityEngine.UI;
 using System.Collections;
 using System;
 /// <summary>
-/// Enumeration for the types of units in the army
-/// </summary>
-public enum UnitType {SWORDSMAN,BOWMAN,HORSEMAN };
-/// <summary>
 /// An Army (groups of units), an army is owned by a player
 /// </summary>
 public class Army

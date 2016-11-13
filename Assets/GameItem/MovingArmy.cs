@@ -22,6 +22,8 @@ class MovingArmy : MonoBehaviour
     /// <summary>
     /// At start is set the moving of the army
     /// </summary>
+    public AudioClip Boom1;
+    public AudioClip Boom2;
     void Start()
     {
         InvokeRepeating("Move", 0, refreshingRate);
@@ -79,7 +81,12 @@ class MovingArmy : MonoBehaviour
             if (_army != null)
 
             {
-                this.army.ConfrontArmy(_army.army);
+                this.army.ConfrontArmy(_army.army);            
+
+                if (this.Boom1 != null && this.Boom2 != null) {
+                    SoundManager.instance.RandomizeSfx(this.Boom1, this.Boom2);
+                }
+
                 _army.CheckDestroy();
             }
             else
@@ -89,6 +96,7 @@ class MovingArmy : MonoBehaviour
                 if (mainBuilding != null)
                 {
                     this.army.ConfrontArmy(mainBuilding.player.reserveArmy);
+                    mainBuilding.CheckDestoy();
                 }
             }
         }
@@ -97,10 +105,8 @@ class MovingArmy : MonoBehaviour
     /// <summary>
     /// Check the destruction of the moving army
     /// </summary>
-    public void CheckDestroy()
-    {
-        if (this.army.TotalUnit <= 0)
-        {
+    public void CheckDestroy() {
+        if (this.army.TotalUnit <= 0) {
             Destroy(this.gameObject);
         }
     }

@@ -5,17 +5,19 @@ using System.Collections;
 /// Script Operating the life of the Production Building
 /// </summary>
 public class UnitBuildingLife : MonoBehaviour {
-    public static int maxlife =100;
+    public static int maxlife = 100;
     public static int RespawnCooldown = 200;
     public Sprite spriteAlive;
     public Sprite spriteDestroy;
-    public int life=maxlife;
+    public int life = maxlife;
     public int cooldownBeforeRespawn = RespawnCooldown;
-	//Initialization of the life at the value set in the config
-	void Start () {
+    public AudioClip BuildingDestroyedSound;
+    void Start() {
+
         life = maxlife;
         cooldownBeforeRespawn = RespawnCooldown;
-	}
+    }
+
 	///checking for the Respawn if needed in the update
 	void Update () {
         if (cooldownBeforeRespawn < RespawnCooldown)
@@ -43,6 +45,7 @@ public class UnitBuildingLife : MonoBehaviour {
             cooldownBeforeRespawn = 0;
             Destroy(this.gameObject.GetComponent<BoxCollider2D>());
             (gameObject.GetComponent<SpriteRenderer>()).sprite = spriteDestroy;
+            SoundManager.instance.RandomizeSfx(this.BuildingDestroyedSound);
         }
     }
 }
