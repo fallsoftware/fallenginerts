@@ -931,6 +931,34 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!1 &122720080
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 122720081}
+  m_Layer: 0
+  m_Name: Lane2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &122720081
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 122720080}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1270, y: -500, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1226591522}
+  m_RootOrder: 5
 --- !u!1 &128596039
 GameObject:
   m_ObjectHideFlags: 0
@@ -1226,6 +1254,34 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 145636722}
+--- !u!1 &148670023
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 148670024}
+  m_Layer: 0
+  m_Name: Lane3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &148670024
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 148670023}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1270, y: -550, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1226591522}
+  m_RootOrder: 6
 --- !u!1 &154624474
 GameObject:
   m_ObjectHideFlags: 0
@@ -1476,6 +1532,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 381878220}
+  - {fileID: 1935326092}
   m_Father: {fileID: 0}
   m_RootOrder: 3
 --- !u!1 &242783199
@@ -2765,9 +2822,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d0fbd7dcded63547b41effab8ef57b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wood: 1000
-  iron: 1000
-  food: 1000
+  wood: 100000
+  iron: 100000
+  food: 100000
   population: 0
 --- !u!1 &388927614
 GameObject:
@@ -4404,6 +4461,34 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!1 &578977705
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 578977706}
+  m_Layer: 0
+  m_Name: Lane1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &578977706
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 578977705}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1270, y: -450, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1226591522}
+  m_RootOrder: 4
 --- !u!1 &584577252
 GameObject:
   m_ObjectHideFlags: 0
@@ -5458,6 +5543,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 753307598}
+  - 114: {fileID: 753307599}
   m_Layer: 0
   m_Name: Life
   m_TagString: Untagged
@@ -5480,6 +5566,19 @@ Transform:
   - {fileID: 1110870545}
   m_Father: {fileID: 1499103251}
   m_RootOrder: 0
+--- !u!114 &753307599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 753307597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57f0f7e131119bd40aae3159b39a27bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life: {fileID: 1110870546}
+  player: {fileID: 381878221}
 --- !u!1 &756272263
 GameObject:
   m_ObjectHideFlags: 0
@@ -5565,7 +5664,7 @@ GameObject:
   - 212: {fileID: 793853190}
   - 114: {fileID: 793853191}
   - 114: {fileID: 793853189}
-  - 114: {fileID: 793853192}
+  - 114: {fileID: 793853193}
   m_Layer: 0
   m_Name: PlayerUnitBuilding2
   m_TagString: Untagged
@@ -5649,7 +5748,7 @@ MonoBehaviour:
   MouseManager: {fileID: 0}
   SpriteRenderer: {fileID: 0}
   UnitBuildingPanel: {fileID: 1562310664}
---- !u!114 &793853192
+--- !u!114 &793853193
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -5657,9 +5756,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 793853187}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af7a93ab9d305dd49857bedd4b049047, type: 3}
+  m_Script: {fileID: 11500000, guid: ded0c880c05debb4f87559d899594745, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteAlive: {fileID: 21300000, guid: 14d033a54c62cce4f8a217365d9e8620, type: 3}
+  spriteDestroy: {fileID: 21300000, guid: 03111ff8fe7d0a549ae22f89865887a5, type: 3}
+  life: 100
+  cooldownBeforeRespawn: 20000
 --- !u!1 &794492278
 GameObject:
   m_ObjectHideFlags: 0
@@ -6408,6 +6511,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 974836432}
+  - 114: {fileID: 974836433}
   m_Layer: 0
   m_Name: Life
   m_TagString: Untagged
@@ -6430,6 +6534,19 @@ Transform:
   - {fileID: 1365417027}
   m_Father: {fileID: 1752838105}
   m_RootOrder: 0
+--- !u!114 &974836433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 974836431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57f0f7e131119bd40aae3159b39a27bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life: {fileID: 1365417028}
+  player: {fileID: 1935326094}
 --- !u!1 &979406673
 GameObject:
   m_ObjectHideFlags: 0
@@ -6778,6 +6895,7 @@ GameObject:
   - 212: {fileID: 1001507349}
   - 114: {fileID: 1001507347}
   - 114: {fileID: 1001507348}
+  - 114: {fileID: 1001507350}
   m_Layer: 0
   m_Name: PlayerUnitBuilding3
   m_TagString: Untagged
@@ -6861,6 +6979,21 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &1001507350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1001507345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ded0c880c05debb4f87559d899594745, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteAlive: {fileID: 21300000, guid: 14d033a54c62cce4f8a217365d9e8620, type: 3}
+  spriteDestroy: {fileID: 21300000, guid: 03111ff8fe7d0a549ae22f89865887a5, type: 3}
+  life: 100
+  cooldownBeforeRespawn: 20000
 --- !u!1 &1006889415
 GameObject:
   m_ObjectHideFlags: 0
@@ -9839,6 +9972,9 @@ Transform:
   - {fileID: 1310061924}
   - {fileID: 1908188563}
   - {fileID: 2044891926}
+  - {fileID: 578977706}
+  - {fileID: 122720081}
+  - {fileID: 148670024}
   m_Father: {fileID: 1418551550}
   m_RootOrder: 1
 --- !u!1 &1244933996
@@ -10615,6 +10751,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1310061924}
   - 212: {fileID: 1310061926}
+  - 114: {fileID: 1310061927}
   - 61: {fileID: 1310061925}
   m_Layer: 0
   m_Name: AIUnitBuilding1
@@ -10630,7 +10767,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1310061923}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1233, y: -450, z: 0}
+  m_LocalPosition: {x: -1235, y: -450, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -10645,7 +10782,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
@@ -10683,6 +10820,21 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &1310061927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1310061923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ded0c880c05debb4f87559d899594745, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteAlive: {fileID: 21300000, guid: cb4a6b24e7e32674f847bb7c21d57917, type: 3}
+  spriteDestroy: {fileID: 21300000, guid: 60477fe1602ff494b84a1e34fe6ad32b, type: 3}
+  life: 0
+  cooldownBeforeRespawn: 200
 --- !u!1 &1326840777
 GameObject:
   m_ObjectHideFlags: 0
@@ -11348,6 +11500,7 @@ GameObject:
   - 212: {fileID: 1385264049}
   - 114: {fileID: 1385264047}
   - 114: {fileID: 1385264048}
+  - 114: {fileID: 1385264050}
   m_Layer: 0
   m_Name: PlayerUnitBuilding1
   m_TagString: Untagged
@@ -11431,6 +11584,21 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &1385264050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1385264045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ded0c880c05debb4f87559d899594745, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteAlive: {fileID: 21300000, guid: 14d033a54c62cce4f8a217365d9e8620, type: 3}
+  spriteDestroy: {fileID: 21300000, guid: 03111ff8fe7d0a549ae22f89865887a5, type: 3}
+  life: 100
+  cooldownBeforeRespawn: 20000
 --- !u!1 &1411703999
 GameObject:
   m_ObjectHideFlags: 0
@@ -16598,7 +16766,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  refreshingRate: 0.2
+  refreshingRate: 0.01
   minionCostWood: 20
   minionCostIron: 20
   minionCostFood: 20
@@ -16643,6 +16811,7 @@ GameObject:
   - 4: {fileID: 1908188563}
   - 212: {fileID: 1908188565}
   - 61: {fileID: 1908188564}
+  - 114: {fileID: 1908188566}
   m_Layer: 0
   m_Name: AIUnitBuilding2
   m_TagString: Untagged
@@ -16657,7 +16826,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1908188562}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1233, y: -500, z: 0}
+  m_LocalPosition: {x: -1235, y: -500, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -16672,7 +16841,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
@@ -16710,6 +16879,21 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &1908188566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1908188562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ded0c880c05debb4f87559d899594745, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteAlive: {fileID: 0}
+  spriteDestroy: {fileID: 0}
+  life: 0
+  cooldownBeforeRespawn: 0
 --- !u!1 &1917172758
 GameObject:
   m_ObjectHideFlags: 0
@@ -17020,6 +17204,70 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1933376872}
+--- !u!1 &1935326091
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1935326092}
+  - 114: {fileID: 1935326094}
+  - 114: {fileID: 1935326093}
+  m_Layer: 0
+  m_Name: Player2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1935326092
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1935326091}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 234764409}
+  m_RootOrder: 1
+--- !u!114 &1935326093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1935326091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 922d2e8fcda399a41a4d085a96bef9c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  army: {fileID: 1000011528708938, guid: 9fa2f796759f21547b5a4b3f0754a877, type: 2}
+  player: {fileID: 1935326094}
+  building1: {fileID: 1385264050}
+  building2: {fileID: 793853193}
+  building3: {fileID: 1001507350}
+  Lane1: {fileID: 578977706}
+  Lane2: {fileID: 122720081}
+  Lane3: {fileID: 148670024}
+--- !u!114 &1935326094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1935326091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d0fbd7dcded63547b41effab8ef57b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wood: 0
+  iron: 0
+  food: 0
+  population: 0
 --- !u!1 &1940791718
 GameObject:
   m_ObjectHideFlags: 0
@@ -17629,6 +17877,7 @@ GameObject:
   - 4: {fileID: 2044891926}
   - 212: {fileID: 2044891928}
   - 61: {fileID: 2044891927}
+  - 114: {fileID: 2044891929}
   m_Layer: 0
   m_Name: AIUnitBuilding3
   m_TagString: Untagged
@@ -17643,7 +17892,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2044891925}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1233, y: -550, z: 0}
+  m_LocalPosition: {x: -1235, y: -550, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -17658,7 +17907,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
@@ -17696,6 +17945,21 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &2044891929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2044891925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ded0c880c05debb4f87559d899594745, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteAlive: {fileID: 0}
+  spriteDestroy: {fileID: 0}
+  life: 0
+  cooldownBeforeRespawn: 0
 --- !u!1 &2049999685
 GameObject:
   m_ObjectHideFlags: 0

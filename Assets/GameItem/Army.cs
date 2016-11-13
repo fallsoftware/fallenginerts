@@ -14,68 +14,53 @@ public class Army
     {
         this.player = _player;
     }
-    void ConfrontArmy(Army otherArmy)
+    public void ConfrontArmy(Army otherArmy)
     {
-        int temptotalbegin1 = this.TotalUnit;
-        int temptotalbegin2 = otherArmy.TotalUnit;
-        int tempbowman = bowmanCount;
-        int tempswordsman = swordsmanCount;
-        int temphorseman = horsemanCount;
-        bowmanCount = Math.Max(0, bowmanCount - otherArmy.swordsmanCount);
-        swordsmanCount = Math.Max(0, swordsmanCount - otherArmy.horsemanCount);
-        horsemanCount = Math.Max(0, horsemanCount - otherArmy.bowmanCount);
-        otherArmy.bowmanCount = Math.Max(0, bowmanCount - tempswordsman);
-        otherArmy.swordsmanCount = Math.Max(0, swordsmanCount - temphorseman);
-        otherArmy.horsemanCount = Math.Max(0, horsemanCount - tempbowman);
-        int temptotal1 = TotalUnit;
-        int temptotal2 = otherArmy.TotalUnit;
-        if (temptotal1 != 0 && temptotal2 != 0)
+        if (otherArmy.player != player)
         {
-            int tempmin1 = Math.Min(temptotal1, otherArmy.swordsmanCount);
-            int tempmin2 = Math.Min(temptotal2, swordsmanCount);
-            temptotal1 -= tempmin2;
-            swordsmanCount -= tempmin2;
-            temptotal2 -= tempmin1;
-            otherArmy.swordsmanCount -= tempmin1;
-            if (temptotal1 != 0 && temptotal2 != 0)
+            int temptotalbegin1 = this.TotalUnit;
+            int temptotalbegin2 = otherArmy.TotalUnit;
+            int tempbowman = bowmanCount;
+            int tempswordsman = swordsmanCount;
+            int temphorseman = horsemanCount;
+            bowmanCount = Math.Max(0, bowmanCount - otherArmy.swordsmanCount);
+            swordsmanCount = Math.Max(0, swordsmanCount - otherArmy.horsemanCount);
+            horsemanCount = Math.Max(0, horsemanCount - otherArmy.bowmanCount);
+            otherArmy.bowmanCount = Math.Max(0, otherArmy.bowmanCount - tempswordsman);
+            otherArmy.swordsmanCount = Math.Max(0, otherArmy.swordsmanCount - temphorseman);
+            otherArmy.horsemanCount = Math.Max(0, otherArmy.horsemanCount - tempbowman);
+            player.population -= (temptotalbegin1 - TotalUnit);
+            otherArmy.player.population -= (temptotalbegin2 - otherArmy.TotalUnit);
+            int ToRemove = Math.Min(this.TotalUnit, otherArmy.TotalUnit);
+            RemoveUnits(ToRemove);
+            otherArmy.RemoveUnits(ToRemove);
+        }
+
+    }
+    public void RemoveUnits(int ToRemoveUnit)
+    {
+        int temp = Math.Min(ToRemoveUnit,TotalUnit);
+        player.population -= temp;
+        if (temp != 0)
+        {
+            int tempmin = Math.Min(temp, swordsmanCount);
+            temp -= tempmin;
+            swordsmanCount -= tempmin;
+            if (temp!= 0)
             {
-                tempmin1 = Math.Min(temptotal1, otherArmy.horsemanCount);
-                tempmin2 = Math.Min(temptotal2, horsemanCount);
-                temptotal1 -= tempmin2;
-                horsemanCount -= tempmin2;
-                temptotal2 -= tempmin1;
-                otherArmy.horsemanCount -= tempmin1;
-                if (temptotal1 != 0 && temptotal2 != 0)
+                tempmin = Math.Min(temp,horsemanCount);
+                horsemanCount -= tempmin;
+                temp -= tempmin;
+                if (temp!= 0)
                 {
-                    tempmin1 = Math.Min(temptotal1, otherArmy.bowmanCount);
-                    tempmin2 = Math.Min(temptotal2, bowmanCount);
-                    temptotal1 -= tempmin2;
-                    bowmanCount -= tempmin2;
-                    temptotal2 -= tempmin1;
-                    otherArmy.bowmanCount -= tempmin1;
+                    tempmin = Math.Min(temp,bowmanCount);
+                    temp -= tempmin;
+                    bowmanCount -= tempmin;
                 }
             }
         }
-        player.population -= (temptotalbegin1 - TotalUnit);
-        otherArmy.player.population -= (temptotalbegin2 - TotalUnit);
-        CheckDestruction();
-        otherArmy.CheckDestruction();
-
 
     }
-    void CheckDestruction()
-    {
-        if (TotalUnit == 0)
-        {
-            //Destroy(gameObject);
-        }
-    }
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     internal void AddUnit(int number, Unit unit)
     {
         if(unit is Bowman)

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-class Minion : Unit
+public class Minion : Unit
 {
     public static int lifetime=60;
     public int time;

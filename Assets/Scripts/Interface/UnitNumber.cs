@@ -2,13 +2,11 @@
 using UnityEngine.UI;
 
 public class UnitNumber : MonoBehaviour {
-    private int _unitNumber;
     private int _minUnitNumber;
     private int _maxUnitNumber;
     private Text _text;
 
     void Start () {
-        this._unitNumber = 1;
         this._minUnitNumber = 0;
         this._maxUnitNumber = 100;
 

@@ -38,8 +38,9 @@ GameObject:
   - 4: {fileID: 4000013715376818}
   - 212: {fileID: 212000010637836796}
   - 114: {fileID: 114000013427872334}
-  - 114: {fileID: 114000014245874614}
   - 114: {fileID: 114000011375177744}
+  - 50: {fileID: 50000013788260196}
+  - 61: {fileID: 61000012189005432}
   m_Layer: 0
   m_Name: PlayerArmy
   m_TagString: Untagged
@@ -373,6 +374,37 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
+--- !u!50 &50000013788260196
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010377405282}
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!61 &61000012189005432
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010377405282}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 8, y: 6}
 --- !u!102 &102000010101855230
 TextMesh:
   serializedVersion: 3
@@ -485,17 +517,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Info: {fileID: 1000013099537480}
---- !u!114 &114000014245874614
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010377405282}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af7a93ab9d305dd49857bedd4b049047, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &212000010459851472
 SpriteRenderer:
   m_ObjectHideFlags: 1

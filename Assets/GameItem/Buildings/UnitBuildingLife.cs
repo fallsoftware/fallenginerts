@@ -1,12 +1,14 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class UnitBuildingLife : MonoBehaviour {
     public static int maxlife =100;
     public static int RespawnCooldown = 200;
-
-    public int life;
-    public int cooldownBeforeRespawn=0;
+    public Sprite spriteAlive;
+    public Sprite spriteDestroy;
+    public int life=maxlife;
+    public int cooldownBeforeRespawn = RespawnCooldown;
 	// Use this for initialization
 	void Start () {
         life = maxlife;
@@ -21,6 +23,11 @@ public class UnitBuildingLife : MonoBehaviour {
             if (cooldownBeforeRespawn == RespawnCooldown)
             {
                 life = maxlife;
+                this.gameObject.AddComponent<BoxCollider2D>();
+                this.gameObject.GetComponent<BoxCollider2D>().isTrigger=true;
+                (gameObject.GetComponent<SpriteRenderer>()).sprite = spriteAlive;
+
+
                 /*
                  *Remettre La boxCollider et rechanger le sprite 
                  */
@@ -32,9 +39,10 @@ public class UnitBuildingLife : MonoBehaviour {
         life -= damage;
         if (life < 0)
         {
-            /*
-             * retirer boxCollider et changer le sprite
-             */
+            life = 0;
+            cooldownBeforeRespawn = 0;
+            Destroy(this.gameObject.GetComponent<BoxCollider2D>());
+            (gameObject.GetComponent<SpriteRenderer>()).sprite = spriteDestroy;
         }
     }
 }

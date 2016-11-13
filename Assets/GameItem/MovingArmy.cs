@@ -20,10 +20,6 @@ class MovingArmy : MonoBehaviour
     {
         InvokeRepeating("Move", 0, refreshingRate);
     }
-    void Create()
-    {
-        
-    }
     void Move()
     {
         switch (direction)
@@ -41,10 +37,50 @@ class MovingArmy : MonoBehaviour
         }
     }
     void Update(){
+
         swordText.text = army.swordsmanCount.ToString();
         bowText.text = army.bowmanCount.ToString();
         horseText.text = army.horsemanCount.ToString();
         
 
+    }
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        GameObject other = collision.gameObject;
+        UnitBuildingLife unit = other.GetComponent<UnitBuildingLife>();
+
+        if (unit != null)
+        {
+            int life = unit.life;
+            unit.HurtBuilding(this.army.TotalUnit);
+            this.army.RemoveUnits(life);
+        }
+        else
+        {
+            MovingArmy army = other.GetComponent<MovingArmy>();
+            if (army != null)
+
+            {
+                this.army.ConfrontArmy(army.army);
+                army.CheckDestroy();
+            }
+            else
+            {
+                MainBuilding mainBuilding = other.GetComponent<MainBuilding>();
+                if (mainBuilding != null)
+                {
+                    this.army.ConfrontArmy(mainBuilding.player.reserveArmy);
+                }
+            }
+        }
+        this.CheckDestroy();
+    }
+    public void CheckDestroy()
+    {
+        if (this.army.TotalUnit <= 0)
+        {
+            Destroy(this.gameObject);
+        }
     }
 }

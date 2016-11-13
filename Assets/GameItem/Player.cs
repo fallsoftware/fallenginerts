@@ -15,10 +15,10 @@ public class Player : MonoBehaviour {
     public static int maxpopulation=200;
     public static int baseregen = 15;
     public static int collectbyminion=10;
-    private List<Minion> minionIdle = new List<Minion>();
-    private List<Minion> minionWood = new List<Minion>();
-    private List<Minion> minionIron = new List<Minion>();
-    private List<Minion> minionFood = new List<Minion>();
+    public List<Minion> minionIdle = new List<Minion>();
+    public List<Minion> minionWood = new List<Minion>();
+    public List<Minion> minionIron = new List<Minion>();
+    public List<Minion> minionFood = new List<Minion>();
     public Army reserveArmy;
 
     // Use this for initialization

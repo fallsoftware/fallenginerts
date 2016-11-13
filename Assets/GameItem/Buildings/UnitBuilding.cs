@@ -28,6 +28,7 @@ public class UnitBuilding : MonoBehaviour {
         this.MouseManager = this.Battleground.GetComponent<MouseManager>();
         this.SpriteRenderer = this.GetComponent<SpriteRenderer>();
         this.DefaultColor = this.SpriteRenderer.color;
-        this.gameObject.AddComponent<BoxCollider2D>();
+        this.gameObject.AddComponent<BoxCollider2D>().isTrigger = true;
     }
+
 }

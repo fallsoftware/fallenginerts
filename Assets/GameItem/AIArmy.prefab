@@ -37,6 +37,8 @@ GameObject:
   - 4: {fileID: 4000012187502748}
   - 212: {fileID: 212000012184190950}
   - 61: {fileID: 61000010050057492}
+  - 50: {fileID: 50000014197113972}
+  - 114: {fileID: 114000011287038552}
   m_Layer: 0
   m_Name: AIArmy
   m_TagString: Untagged
@@ -311,6 +313,23 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
+--- !u!50 &50000014197113972
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011528708938}
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!61 &61000010050057492
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -320,7 +339,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
@@ -388,6 +407,22 @@ TextMesh:
   m_Color:
     serializedVersion: 2
     rgba: 4294967295
+--- !u!114 &114000011287038552
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011528708938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6b7cf9c8da57384ab136073275e627c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  swordText: {fileID: 102000014027729894}
+  bowText: {fileID: 102000013429430820}
+  horseText: {fileID: 102000010284866862}
+  direction: 1
 --- !u!212 &212000010517660194
 SpriteRenderer:
   m_ObjectHideFlags: 1
