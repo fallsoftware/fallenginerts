@@ -16,6 +16,8 @@ class MovingArmy : MonoBehaviour
     public TextMesh horseText;
     public Direction direction=Direction.RIGHT;
     public Army army;
+    public AudioClip Boom1;
+    public AudioClip Boom2;
     void Start()
     {
         InvokeRepeating("Move", 0, refreshingRate);
@@ -62,7 +64,12 @@ class MovingArmy : MonoBehaviour
             if (army != null)
 
             {
-                this.army.ConfrontArmy(army.army);
+                this.army.ConfrontArmy(army.army);            
+
+                if (this.Boom1 != null && this.Boom2 != null) {
+                    SoundManager.instance.RandomizeSfx(this.Boom1, this.Boom2);
+                }
+
                 army.CheckDestroy();
             }
             else

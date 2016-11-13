@@ -219,6 +219,7 @@ MonoBehaviour:
   BattleGround: {fileID: 0}
   MouseManager: {fileID: 0}
   ShutPanels: 0
+  MenuSfx: {fileID: 8300000, guid: 30237d578fc89614093d6c773e3c6930, type: 3}
 --- !u!114 &6823558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1123,6 +1124,7 @@ MonoBehaviour:
   BattleGround: {fileID: 1417852361}
   MouseManager: {fileID: 0}
   ShutPanels: 1
+  MenuSfx: {fileID: 0}
 --- !u!114 &128596043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1179,6 +1181,7 @@ MonoBehaviour:
   Lane2: {fileID: 378996831}
   Lane3: {fileID: 142060087}
   Chooser: {fileID: 1006889417}
+  LaunchArmySound: {fileID: 8300000, guid: 21293041241f8a74bab00682855de80f, type: 3}
 --- !u!1 &139823344
 GameObject:
   m_ObjectHideFlags: 0
@@ -3118,6 +3121,7 @@ MonoBehaviour:
   iron: 100000
   food: 100000
   population: 0
+  BuildUnitSound: {fileID: 8300000, guid: fe55e568af64d6a4f832bd6ac9f5511e, type: 3}
 --- !u!1 &388927614
 GameObject:
   m_ObjectHideFlags: 0
@@ -6130,6 +6134,8 @@ MonoBehaviour:
   spriteDestroy: {fileID: 21300000, guid: 03111ff8fe7d0a549ae22f89865887a5, type: 3}
   life: 100
   cooldownBeforeRespawn: 20000
+  BuildingDestroyedSound: {fileID: 8300000, guid: 8317e6a415e567a4399b90bbcad9a3a1,
+    type: 3}
 --- !u!1 &794492278
 GameObject:
   m_ObjectHideFlags: 0
@@ -6280,7 +6286,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1685203406}
+      - m_Target: {fileID: 0}
         m_MethodName: HandleMenu
         m_Mode: 1
         m_Arguments:
@@ -7203,6 +7209,7 @@ MonoBehaviour:
   BattleGround: {fileID: 0}
   MouseManager: {fileID: 0}
   ShutPanels: 0
+  MenuSfx: {fileID: 0}
 --- !u!114 &997853541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7364,6 +7371,8 @@ MonoBehaviour:
   spriteDestroy: {fileID: 21300000, guid: 03111ff8fe7d0a549ae22f89865887a5, type: 3}
   life: 100
   cooldownBeforeRespawn: 20000
+  BuildingDestroyedSound: {fileID: 8300000, guid: 8317e6a415e567a4399b90bbcad9a3a1,
+    type: 3}
 --- !u!1 &1006889415
 GameObject:
   m_ObjectHideFlags: 0
@@ -7448,11 +7457,11 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: 1
+    - m_Text: North
       m_Image: {fileID: 0}
-    - m_Text: 2
+    - m_Text: Center
       m_Image: {fileID: 0}
-    - m_Text: 3
+    - m_Text: South
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
@@ -8253,6 +8262,7 @@ MonoBehaviour:
   BattleGround: {fileID: 0}
   MouseManager: {fileID: 0}
   ShutPanels: 0
+  MenuSfx: {fileID: 0}
 --- !u!114 &1043471483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10551,6 +10561,200 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1248196614}
+--- !u!1 &1253039812
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1253039813}
+  - 82: {fileID: 1253039815}
+  - 82: {fileID: 1253039814}
+  - 114: {fileID: 1253039816}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1253039813
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1253039812}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -214, y: -16, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+--- !u!82 &1253039814
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1253039812}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!82 &1253039815
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1253039812}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 35898284570d6d041ada2db4ebafc04d, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.026
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!114 &1253039816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1253039812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be6362a932dfd7941b6489ef76cb5338, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  efxSource: {fileID: 1253039814}
+  musicSource: {fileID: 1253039815}
+  lowPitchRange: 0.95
+  highPitchRange: 1.05
 --- !u!1 &1254191664
 GameObject:
   m_ObjectHideFlags: 0
@@ -11208,6 +11412,8 @@ MonoBehaviour:
   spriteDestroy: {fileID: 21300000, guid: 60477fe1602ff494b84a1e34fe6ad32b, type: 3}
   life: 0
   cooldownBeforeRespawn: 200
+  BuildingDestroyedSound: {fileID: 8300000, guid: 8317e6a415e567a4399b90bbcad9a3a1,
+    type: 3}
 --- !u!1 &1326840777
 GameObject:
   m_ObjectHideFlags: 0
@@ -11972,6 +12178,8 @@ MonoBehaviour:
   spriteDestroy: {fileID: 21300000, guid: 03111ff8fe7d0a549ae22f89865887a5, type: 3}
   life: 100
   cooldownBeforeRespawn: 20000
+  BuildingDestroyedSound: {fileID: 8300000, guid: 8317e6a415e567a4399b90bbcad9a3a1,
+    type: 3}
 --- !u!1 &1411703999
 GameObject:
   m_ObjectHideFlags: 0
@@ -13880,6 +14088,7 @@ MonoBehaviour:
   BattleGround: {fileID: 0}
   MouseManager: {fileID: 0}
   ShutPanels: 0
+  MenuSfx: {fileID: 0}
 --- !u!114 &1562310669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15067,7 +15276,6 @@ GameObject:
   - 114: {fileID: 1685203405}
   - 114: {fileID: 1685203404}
   - 114: {fileID: 1685203406}
-  - 114: {fileID: 1685203409}
   m_Layer: 5
   m_Name: Pause
   m_TagString: Untagged
@@ -15126,6 +15334,7 @@ MonoBehaviour:
   BattleGround: {fileID: 0}
   MouseManager: {fileID: 0}
   ShutPanels: 0
+  MenuSfx: {fileID: 8300000, guid: 967f791a92afb824bb0337a46524888e, type: 3}
 --- !u!223 &1685203407
 Canvas:
   m_ObjectHideFlags: 0
@@ -15167,20 +15376,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1685203409
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1685203403}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e8f613d3f2b0934a896a2711d6bc007, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BattleGround: {fileID: 0}
-  MouseManager: {fileID: 0}
-  ShutPanels: 0
 --- !u!1 &1690868615
 GameObject:
   m_ObjectHideFlags: 0
@@ -17566,6 +17761,8 @@ MonoBehaviour:
   spriteDestroy: {fileID: 0}
   life: 0
   cooldownBeforeRespawn: 0
+  BuildingDestroyedSound: {fileID: 8300000, guid: 8317e6a415e567a4399b90bbcad9a3a1,
+    type: 3}
 --- !u!1 &1917172758
 GameObject:
   m_ObjectHideFlags: 0
@@ -17940,6 +18137,7 @@ MonoBehaviour:
   iron: 0
   food: 0
   population: 0
+  BuildUnitSound: {fileID: 0}
 --- !u!1 &1940791718
 GameObject:
   m_ObjectHideFlags: 0
@@ -18632,6 +18830,8 @@ MonoBehaviour:
   spriteDestroy: {fileID: 0}
   life: 0
   cooldownBeforeRespawn: 0
+  BuildingDestroyedSound: {fileID: 8300000, guid: 8317e6a415e567a4399b90bbcad9a3a1,
+    type: 3}
 --- !u!1 &2049999685
 GameObject:
   m_ObjectHideFlags: 0
@@ -18801,7 +19001,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 1
+  m_Text: Lane
 --- !u!222 &2058605009
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -505,6 +505,8 @@ MonoBehaviour:
   bowText: {fileID: 102000013804273790}
   horseText: {fileID: 102000010849251144}
   direction: 0
+  Boom1: {fileID: 8300000, guid: f6f548cc51a9a4a439f803d4e99e0ccd, type: 3}
+  Boom2: {fileID: 8300000, guid: 27f173ccb2a7192488218b6f2efce89f, type: 3}
 --- !u!114 &114000013427872334
 MonoBehaviour:
   m_ObjectHideFlags: 1

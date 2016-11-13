@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Menu : MonoBehaviour {
     public GameObject BattleGround;
     [HideInInspector] public MouseManager MouseManager = null;
     public bool ShutPanels = false;
+    public AudioClip MenuSfx;
 
     void Start () {
         if (this.BattleGround == null) return;
@@ -18,7 +20,7 @@ public class Menu : MonoBehaviour {
 
     public void Restart() {
         Time.timeScale = 1f;
-        Application.LoadLevel(0);
+        SceneManager.LoadScene(0);
     }
 
     public void HandleMenu() {
@@ -28,6 +30,10 @@ public class Menu : MonoBehaviour {
         }
 
         this.gameObject.SetActive(!this.gameObject.activeSelf);
+
+        if (this.MenuSfx == null) return;
+
+        SoundManager.instance.RandomizeSfx(this.MenuSfx);
     }
 
     public void HandlePause() {
@@ -38,5 +44,9 @@ public class Menu : MonoBehaviour {
          } else {
              Time.timeScale = 1f;
          }
+
+        if (this.MenuSfx == null) return;
+
+        SoundManager.instance.RandomizeSfx(this.MenuSfx);
     }
 }

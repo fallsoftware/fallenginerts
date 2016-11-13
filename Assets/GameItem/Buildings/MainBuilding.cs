@@ -23,6 +23,8 @@ class MainBuilding : MonoBehaviour
     }
 
     private void GameOver(string playerTag) {
+        Menu menu = this.GameOverPanel.GetComponent<Menu>();
+        SoundManager.instance.RandomizeSfx(menu.MenuSfx);
         this.GameOverPanel.SetActive(true);
         Time.timeScale = 0f;
 

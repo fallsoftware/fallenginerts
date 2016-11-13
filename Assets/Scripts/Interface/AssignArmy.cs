@@ -15,6 +15,7 @@ public class AssignArmy : MonoBehaviour {
     public Transform Lane2;
     public Transform Lane3;
     public Dropdown Chooser;
+    public AudioClip LaunchArmySound;
     // Use this for initialization
     void Start () {
         
@@ -68,6 +69,7 @@ public class AssignArmy : MonoBehaviour {
         player.reserveArmy.swordsmanCount -= currentRealArmy.swordsmanCount;
         player.reserveArmy.bowmanCount -= currentRealArmy.bowmanCount;
         player.reserveArmy.horsemanCount -= currentRealArmy.horsemanCount;
+        SoundManager.instance.RandomizeSfx(this.LaunchArmySound);
     }
 
 }

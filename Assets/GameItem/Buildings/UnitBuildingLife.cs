@@ -9,8 +9,9 @@ public class UnitBuildingLife : MonoBehaviour {
     public Sprite spriteDestroy;
     public int life=maxlife;
     public int cooldownBeforeRespawn = RespawnCooldown;
-	// Use this for initialization
-	void Start () {
+    public AudioClip BuildingDestroyedSound;
+    // Use this for initialization
+    void Start () {
         life = maxlife;
         cooldownBeforeRespawn = RespawnCooldown;
 	}
@@ -43,6 +44,7 @@ public class UnitBuildingLife : MonoBehaviour {
             cooldownBeforeRespawn = 0;
             Destroy(this.gameObject.GetComponent<BoxCollider2D>());
             (gameObject.GetComponent<SpriteRenderer>()).sprite = spriteDestroy;
+            SoundManager.instance.RandomizeSfx(this.BuildingDestroyedSound);
         }
     }
 }

@@ -20,6 +20,7 @@ public class Player : MonoBehaviour {
     public List<Minion> minionIron = new List<Minion>();
     public List<Minion> minionFood = new List<Minion>();
     public Army reserveArmy;
+    public AudioClip BuildUnitSound;
 
     // Use this for initialization
     void Start () {
@@ -81,6 +82,7 @@ public class Player : MonoBehaviour {
                 minions.Add(new Minion());
             }
             population += number;
+            SoundManager.instance.RandomizeSfx(this.BuildUnitSound);
         }
     }
 
@@ -93,6 +95,7 @@ public class Player : MonoBehaviour {
             iron -= number * unit.GetIronCost();
             population += number*unit.GetPopulationCost();
             reserveArmy.AddUnit(number, unit);
+            SoundManager.instance.RandomizeSfx(this.BuildUnitSound);
             
         }
     }
