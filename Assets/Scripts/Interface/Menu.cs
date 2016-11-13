@@ -4,14 +4,11 @@ using UnityEngine.UI;
 
 public class Menu : MonoBehaviour {
     public GameObject BattleGround;
-    [HideInInspector] public MouseManager MouseManager = null;
+    [HideInInspector] public MouseManager MouseManager;
     public bool ShutPanels = false;
     public AudioClip MenuSfx;
 
     void Start () {
-        if (this.BattleGround == null) return;
-
-        this.MouseManager = this.BattleGround.GetComponent<MouseManager>();
     }
 	
 	void Update () {
@@ -24,6 +21,8 @@ public class Menu : MonoBehaviour {
     }
 
     public void HandleMenu() {
+        this.initializeField();
+
         if (this.MouseManager != null && this.ShutPanels) {
             this.MouseManager.ResetSpriteRenderers();
             this.MouseManager.ShutAllPanels();
@@ -48,5 +47,11 @@ public class Menu : MonoBehaviour {
         if (this.MenuSfx == null) return;
 
         SoundManager.instance.RandomizeSfx(this.MenuSfx);
+    }
+
+    private void initializeField() {
+        if (this.BattleGround == null || this.MouseManager != null) return;
+
+        this.MouseManager = this.BattleGround.GetComponent<MouseManager>();
     }
 }

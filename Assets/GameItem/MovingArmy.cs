@@ -73,6 +73,7 @@ class MovingArmy : MonoBehaviour
             int life = unit.life;
             unit.HurtBuilding(this.army.TotalUnit);
             this.army.RemoveUnits(life);
+            SoundManager.instance.RandomizeSfx(this.Boom2);
         }
         else
         {
@@ -84,7 +85,7 @@ class MovingArmy : MonoBehaviour
                 this.army.ConfrontArmy(_army.army);            
 
                 if (this.Boom1 != null && this.Boom2 != null) {
-                    SoundManager.instance.RandomizeSfx(this.Boom1, this.Boom2);
+                    SoundManager.instance.RandomizeSfx(this.Boom1);
                 }
 
                 _army.CheckDestroy();

@@ -423,6 +423,8 @@ MonoBehaviour:
   bowText: {fileID: 102000013429430820}
   horseText: {fileID: 102000010284866862}
   direction: 1
+  Boom1: {fileID: 8300000, guid: f6f548cc51a9a4a439f803d4e99e0ccd, type: 3}
+  Boom2: {fileID: 8300000, guid: 27f173ccb2a7192488218b6f2efce89f, type: 3}
 --- !u!212 &212000010517660194
 SpriteRenderer:
   m_ObjectHideFlags: 1

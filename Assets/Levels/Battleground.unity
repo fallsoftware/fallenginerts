@@ -7206,7 +7206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e8f613d3f2b0934a896a2711d6bc007, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BattleGround: {fileID: 0}
+  BattleGround: {fileID: 1417852361}
   MouseManager: {fileID: 0}
   ShutPanels: 0
   MenuSfx: {fileID: 0}
@@ -17653,7 +17653,7 @@ MonoBehaviour:
   bowmanCostPopulation: 1
   PlayermaxPopulation: 200
   PlayerRegen: 10
-  UnitBuildingLife: 200
+  UnitBuildingMaxLife: 100
   UnitBuildingRespawnTime: 200
 --- !u!4 &1887977111
 Transform:
