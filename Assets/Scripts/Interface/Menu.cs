@@ -16,6 +16,11 @@ public class Menu : MonoBehaviour {
 	
 	}
 
+    public void Restart() {
+        Time.timeScale = 1f;
+        Application.LoadLevel(0);
+    }
+
     public void HandleMenu() {
         if (this.MouseManager != null && this.ShutPanels) {
             this.MouseManager.ResetSpriteRenderers();
