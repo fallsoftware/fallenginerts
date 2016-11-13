@@ -3368,7 +3368,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 100
   m_WholeNumbers: 1
-  m_Value: 1
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -7660,7 +7660,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 100
   m_WholeNumbers: 1
-  m_Value: 1
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -8276,7 +8276,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 381878221}
   connectedSlider: {fileID: 1086415087}
-  connectedImage: {fileID: 707803082}
+  connectedImage: {fileID: 1676038165}
   woodSprite: {fileID: 21300000, guid: beaec3d33949b1e4abdea2329be8fafa, type: 3}
   ironSprite: {fileID: 21300000, guid: 452d5569bb699b042961d2435aac1de7, type: 3}
   foodSprite: {fileID: 21300000, guid: c9da0f795a6dff9439b11b2bf232edf1, type: 3}
@@ -12511,7 +12511,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 100
   m_WholeNumbers: 1
-  m_Value: 1
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
