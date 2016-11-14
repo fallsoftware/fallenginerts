@@ -1,16 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+/// <summary>
+/// Script for displaying infos
+/// </summary>
 public class MouseInfo : MonoBehaviour {
     public GameObject Info;
-
-	void Start() {
-	
-	}
-	
-	void Update() {
-	
-	}
 
     void OnMouseOver() {
         this.Info.SetActive(true);

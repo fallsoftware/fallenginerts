@@ -1,17 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+/// <summary>
+/// Script for exiting the game
+/// </summary>
 public class ExitGame : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 
     public void QuitApplication() {
         Application.Quit();

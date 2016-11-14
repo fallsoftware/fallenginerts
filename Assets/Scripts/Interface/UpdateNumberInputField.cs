@@ -1,7 +1,9 @@
 ﻿using System;
 using UnityEngine;
 using UnityEngine.UI;
-
+/// <summary>
+/// Script of gestion of input fields
+/// </summary>
 public class UpdateNumberInputField : MonoBehaviour {
     private int _min = 0;
     private int _max = 100;
@@ -12,16 +14,15 @@ public class UpdateNumberInputField : MonoBehaviour {
 	    this._inputField = this.GetComponent<InputField>();
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 
     public void setMax(int newMax)
     {
         _max=newMax;
     }
-
+    /// <summary>
+    /// update the number displayed
+    /// </summary>
+    /// <param name="value"></param>
 
     public void UpdateNumber(string value)
     {
@@ -36,6 +37,10 @@ public class UpdateNumberInputField : MonoBehaviour {
         }
     }
 
+    /// <summary>
+    /// update the number displayed from a float
+    /// </summary>
+    /// <param name="value"></param>
     public void UpdateNumberFromFloat(float value) {
         if (_inputField != null)
         {
