@@ -10,11 +10,16 @@ public class PlayerMainBuilding : UnitBuilding {
 
     void Start () {
         this.InitializeFields();
+        InvokeRepeating("UpdateCollider", 0, 0.5f);
     }
-	
-	void Update () {
-	
-	}
+
+    void UpdateCollider() {
+        BoxCollider2D collider = this.GetComponent<BoxCollider2D>();
+        Destroy(collider);
+        BoxCollider2D newCollider = this.gameObject.AddComponent<BoxCollider2D>();
+        newCollider.isTrigger = true;
+    }
+
 
     //On click we activate the interface of the main building
     void OnMouseDown() {

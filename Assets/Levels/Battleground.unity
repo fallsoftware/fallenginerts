@@ -6036,6 +6036,7 @@ GameObject:
   - 114: {fileID: 793853191}
   - 114: {fileID: 793853189}
   - 114: {fileID: 793853193}
+  - 61: {fileID: 793853192}
   m_Layer: 0
   m_Name: PlayerUnitBuilding2
   m_TagString: Untagged
@@ -6119,6 +6120,21 @@ MonoBehaviour:
   MouseManager: {fileID: 0}
   SpriteRenderer: {fileID: 0}
   UnitBuildingPanel: {fileID: 1562310664}
+  isDestroyed: 0
+--- !u!61 &793853192
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 793853187}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 6, y: 6}
 --- !u!114 &793853193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7273,6 +7289,7 @@ GameObject:
   - 114: {fileID: 1001507347}
   - 114: {fileID: 1001507348}
   - 114: {fileID: 1001507350}
+  - 61: {fileID: 1001507351}
   m_Layer: 0
   m_Name: PlayerUnitBuilding3
   m_TagString: Untagged
@@ -7311,6 +7328,7 @@ MonoBehaviour:
   MouseManager: {fileID: 0}
   SpriteRenderer: {fileID: 0}
   UnitBuildingPanel: {fileID: 1562310664}
+  isDestroyed: 0
 --- !u!114 &1001507348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7373,6 +7391,20 @@ MonoBehaviour:
   cooldownBeforeRespawn: 20000
   BuildingDestroyedSound: {fileID: 8300000, guid: 8317e6a415e567a4399b90bbcad9a3a1,
     type: 3}
+--- !u!61 &1001507351
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1001507345}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 6, y: 6}
 --- !u!1 &1006889415
 GameObject:
   m_ObjectHideFlags: 0
@@ -12080,6 +12112,7 @@ GameObject:
   - 114: {fileID: 1385264047}
   - 114: {fileID: 1385264048}
   - 114: {fileID: 1385264050}
+  - 61: {fileID: 1385264051}
   m_Layer: 0
   m_Name: PlayerUnitBuilding1
   m_TagString: Untagged
@@ -12118,6 +12151,7 @@ MonoBehaviour:
   MouseManager: {fileID: 0}
   SpriteRenderer: {fileID: 0}
   UnitBuildingPanel: {fileID: 1562310664}
+  isDestroyed: 0
 --- !u!114 &1385264048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12180,6 +12214,20 @@ MonoBehaviour:
   cooldownBeforeRespawn: 20000
   BuildingDestroyedSound: {fileID: 8300000, guid: 8317e6a415e567a4399b90bbcad9a3a1,
     type: 3}
+--- !u!61 &1385264051
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1385264045}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 6, y: 6}
 --- !u!1 &1411703999
 GameObject:
   m_ObjectHideFlags: 0
@@ -13007,9 +13055,8 @@ GameObject:
   - 212: {fileID: 1499103252}
   - 114: {fileID: 1499103253}
   - 114: {fileID: 1499103254}
-  - 114: {fileID: 1499103255}
-  - 61: {fileID: 1499103256}
   - 114: {fileID: 1499103257}
+  - 61: {fileID: 1499103255}
   m_Layer: 0
   m_Name: PlayerMainBuilding
   m_TagString: Untagged
@@ -13030,6 +13077,7 @@ Transform:
   m_Children:
   - {fileID: 753307598}
   - {fileID: 598309772}
+  - {fileID: 1865357878}
   m_Father: {fileID: 1805149196}
   m_RootOrder: 0
 --- !u!212 &1499103252
@@ -13095,18 +13143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Info: {fileID: 598309771}
---- !u!114 &1499103255
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1499103250}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af7a93ab9d305dd49857bedd4b049047, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!61 &1499103256
+--- !u!61 &1499103255
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -13119,7 +13156,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 6, y: 30}
+  m_Size: {x: 6, y: 6}
 --- !u!114 &1499103257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17317,6 +17354,49 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!1 &1865357877
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1865357878}
+  - 61: {fileID: 1865357879}
+  m_Layer: 0
+  m_Name: DeathZone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1865357878
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1865357877}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1499103251}
+  m_RootOrder: 2
+--- !u!61 &1865357879
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1865357877}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 6, y: 30}
 --- !u!1 &1873039937
 GameObject:
   m_ObjectHideFlags: 0
