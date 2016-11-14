@@ -29,7 +29,7 @@ public class IA : MonoBehaviour {
     /// </summary>
     void Start () {
         state = State.WOOD;
-        InvokeRepeating("ComputeIA",0, 3);
+        InvokeRepeating("ComputeIA",0, 2);
 	}
     /// <summary>
     /// Computation of the IA with a VERY SIMPLE state machine
@@ -118,7 +118,6 @@ public class IA : MonoBehaviour {
             //we then buy more minions if needed else we buy units
             case State.SEND:
                 {
-                    player.BuyMinionFood(player.maxBuyableUnit(new Minion()));
                     MovingArmy currentArmy = Instantiate(army).GetComponent<MovingArmy>();
                     currentArmy.player = player;
                     currentArmy.army = new Army(player);
@@ -177,11 +176,11 @@ public class IA : MonoBehaviour {
                     }
                     else
                     {
-                        if (player.reserveArmy.bowmanCount == 0)
+                        if (player.reserveArmy.bowmanCount <10 )
                         {
                             state = State.BOW;
                         }
-                        else if(player.reserveArmy.horsemanCount == 0)
+                        else if(player.reserveArmy.horsemanCount < 10)
                         {
                             state = State.HORSE;
                         }
