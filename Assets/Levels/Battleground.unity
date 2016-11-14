@@ -3117,9 +3117,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d0fbd7dcded63547b41effab8ef57b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wood: 100000
-  iron: 100000
-  food: 100000
+  wood: 100
+  iron: 100
+  food: 100
   population: 0
   BuildUnitSound: {fileID: 8300000, guid: fe55e568af64d6a4f832bd6ac9f5511e, type: 3}
 --- !u!1 &388927614
@@ -17734,7 +17734,7 @@ MonoBehaviour:
   PlayermaxPopulation: 200
   PlayerRegen: 10
   UnitBuildingMaxLife: 100
-  UnitBuildingRespawnTime: 200
+  UnitBuildingRespawnTime: 2000
 --- !u!4 &1887977111
 Transform:
   m_ObjectHideFlags: 0
@@ -18213,9 +18213,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d0fbd7dcded63547b41effab8ef57b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wood: 0
-  iron: 0
-  food: 0
+  wood: 100
+  iron: 100
+  food: 100
   population: 0
   BuildUnitSound: {fileID: 0}
 --- !u!1 &1940791718

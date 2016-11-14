@@ -29,7 +29,11 @@ public class UnitBuildingLife : MonoBehaviour {
                 this.gameObject.AddComponent<BoxCollider2D>();
                 this.gameObject.GetComponent<BoxCollider2D>().isTrigger=true;
                 (gameObject.GetComponent<SpriteRenderer>()).sprite = spriteAlive;
-                gameObject.GetComponent<PlayerUnitBuilding>().isDestroyed = false;
+                PlayerUnitBuilding building = gameObject.GetComponent<PlayerUnitBuilding>();
+                if (building != null)
+                {
+                    building.isDestroyed = false;
+                }
             }
         }
 	}
@@ -47,7 +51,12 @@ public class UnitBuildingLife : MonoBehaviour {
             Destroy(this.gameObject.GetComponent<BoxCollider2D>());
             (gameObject.GetComponent<SpriteRenderer>()).sprite = spriteDestroy;
             SoundManager.instance.RandomizeSfx(this.BuildingDestroyedSound);
-            gameObject.GetComponent<PlayerUnitBuilding>().isDestroyed = true;
+            PlayerUnitBuilding building = gameObject.GetComponent<PlayerUnitBuilding>();
+            if(building != null)
+            {
+                building.isDestroyed = true;
+            }
+           
         }
     }
 }
