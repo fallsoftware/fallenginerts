@@ -9,35 +9,51 @@ public class PlayerMainBuilding : UnitBuilding {
     public GameObject MinionAssignPanel;
 
     void Start () {
-        this.InitializeFields();
+        this.InitializeFields(); // calling the parent function to initialize
+        // the right fields
         InvokeRepeating("UpdateCollider", 0, 0.5f);
     }
 
+    /// <summary>
+    /// this function is pretty UGLY. It's a small fix to make the game
+    /// playable. OnMouseDown and OnMouseUp are bugguy on Unity and we
+    /// needed to reset the collider often to make it work
+    /// </summary>
     void UpdateCollider() {
         BoxCollider2D collider = this.GetComponent<BoxCollider2D>();
         Destroy(collider);
-        BoxCollider2D newCollider = this.gameObject.AddComponent<BoxCollider2D>();
+        BoxCollider2D newCollider 
+            = this.gameObject.AddComponent<BoxCollider2D>();
         newCollider.isTrigger = true;
+        newCollider.size = new Vector3(6, 30, 1);
     }
 
-
-    //On click we activate the interface of the main building
+    /// <summary>
+    /// activating the interface of the building
+    /// </summary>
     void OnMouseDown() {
-        if (EventSystem.current.IsPointerOverGameObject()) return;
+        if (EventSystem.current.IsPointerOverGameObject()) return; // prevent
+        // interacting with anything else
 
         if (!this.MinionBuildingPanel.activeSelf
             || !this.MinionAssignPanel.activeSelf) {
-            this.MouseManager.MouseOnObject = true;
+            this.MouseManager.MouseOnObject = true; // telling the MouseManager
+            // that the mouse hit an object
         }
     }
 
+    /// <summary>
+    /// when the button's been pressed on
+    /// </summary>
     void OnMouseUp() {
-        if (EventSystem.current.IsPointerOverGameObject()) return;
+        if (EventSystem.current.IsPointerOverGameObject()) return; // prevent
+        // interacting with anything else
 
         if (!this.MinionBuildingPanel.activeSelf) {
             if (!this.MinionAssignPanel.activeSelf) {
                 this.MouseManager.ShutAllPanels();
-                this.MouseManager.ResetSpriteRenderers();
+                this.MouseManager.ResetSpriteRenderers(); // make the green
+                // cursors disappear
                 this.MinionBuildingPanel.SetActive(true);
                 this.SetSelectedColorState();
             }

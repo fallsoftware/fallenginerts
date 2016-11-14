@@ -3,10 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.EventSystems;
 
+/// <summary>
+/// class needed to handle the UI with the mouse
+/// </summary>
 public class MouseManager : MonoBehaviour {
-    public GameObject[] UIElements;
-    public GameObject[] BuildingElements;
-    [HideInInspector] public bool MouseOnObject;
+    public GameObject[] UIElements; // elements of the HUD
+    public GameObject[] BuildingElements; // buildings handled by the manager
+    [HideInInspector] public bool MouseOnObject; // used to know if the mouse
+    // is currently on an object or not
     private UnitBuilding[] _unitBuildings;
 
     void Start () {
