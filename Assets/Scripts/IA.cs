@@ -40,7 +40,7 @@ public class IA : MonoBehaviour {
             //On the state wood we buy minions for the wood,we then switch to a ressource needed or to buy swords
             case State.WOOD:
                 {
-                    player.BuyMinionWood(Math.Max(20,player.maxBuyableUnit(new Minion())));
+                    player.BuyMinionWood(Math.Min(20,player.maxBuyableUnit(new Minion())));
                     if (player.minionFood.Count < 20)
                     {
                         state = State.FOOD;
@@ -58,7 +58,7 @@ public class IA : MonoBehaviour {
             //On the state food we buy minions for the food,we then switch to a ressource needed or to buy swords
             case State.FOOD:
                 {
-                    player.BuyMinionFood(Math.Max(20, player.maxBuyableUnit(new Minion())));
+                    player.BuyMinionFood(Math.Min(20, player.maxBuyableUnit(new Minion())));
                     if (player.minionIron.Count < 20)
                     {
                         state = State.IRON;
@@ -72,7 +72,7 @@ public class IA : MonoBehaviour {
             //On the state iron we buy minions for the iron,we then switch to buy swords
             case State.IRON:
                 {
-                    player.BuyMinionIron(Math.Max(20, player.maxBuyableUnit(new Minion())));
+                    player.BuyMinionIron(Math.Min(20, player.maxBuyableUnit(new Minion())));
                     state = State.SWORD;
 
                     break;
