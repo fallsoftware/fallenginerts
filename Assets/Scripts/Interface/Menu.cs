@@ -9,14 +9,9 @@ public class Menu : MonoBehaviour {
     [HideInInspector] public MouseManager MouseManager;
     public bool ShutPanels = false;
     public AudioClip MenuSfx;
-
-    void Start () {
-    }
-	
-	void Update () {
-	
-	}
-
+    /// <summary>
+    /// On restart we reaload the scene
+    /// </summary>
     public void Restart() {
         Time.timeScale = 1f;
         SceneManager.LoadScene(0);
@@ -36,7 +31,9 @@ public class Menu : MonoBehaviour {
 
         SoundManager.instance.RandomizeSfx(this.MenuSfx);
     }
-
+    /// <summary>
+    /// handle of the timescale and sfx on the pause/unpause
+    /// </summary>
     public void HandlePause() {
         this.gameObject.SetActive(!this.gameObject.activeSelf);
 
@@ -50,7 +47,9 @@ public class Menu : MonoBehaviour {
 
         SoundManager.instance.RandomizeSfx(this.MenuSfx);
     }
-
+    /// <summary>
+    /// Initialization of the mousemanager
+    /// </summary>
     private void initializeField() {
         if (this.BattleGround == null || this.MouseManager != null) return;
 

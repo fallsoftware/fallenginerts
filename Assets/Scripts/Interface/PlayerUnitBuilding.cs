@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
-
+/// <summary>
+/// Script of gestion of the player building
+/// </summary>
 public class PlayerUnitBuilding : UnitBuilding {
     public GameObject UnitBuildingPanel;
 
@@ -8,9 +10,7 @@ public class PlayerUnitBuilding : UnitBuilding {
         this.InitializeFields();
     }
 
-    void Update() {
 
-    }
 
     void OnMouseDown() {
         if (EventSystem.current.IsPointerOverGameObject()) return;
