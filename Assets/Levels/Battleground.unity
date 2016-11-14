@@ -17713,7 +17713,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  refreshingRate: 0.01
+  refreshingRate: 0.03
   minionCostWood: 20
   minionCostIron: 20
   minionCostFood: 20
